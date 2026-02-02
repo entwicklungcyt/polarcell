@@ -1,0 +1,179 @@
+import { defineNuxtModule, addComponent, createResolver, extendPages, addImportsDir, addPlugin } from '@nuxt/kit';
+import type { NuxtPage, AppConfig } from '@nuxt/schema';
+import tailwindPlugin from 'tailwindcss/plugin';
+import defaultTheme from 'tailwindcss/defaultTheme';
+
+export default defineNuxtModule({
+  async setup(options, nuxt) {
+    /**
+     * Some inline JS before Nuxt app loads (for 1- or 2-column layout)
+     */
+    nuxt.options.app.head ||= {}
+    nuxt.options.app.head.script ||= []
+
+    nuxt.options.app.head.script.push({
+      type: 'text/javascript',
+      innerHTML: `
+        (function() {
+          try {
+            if (localStorage.getItem('singleColumn')) {
+              document.documentElement.classList.add('single-column');
+            }
+          } catch (e) {
+            // localStorage might be disabled, ignore error 
+          }
+        })();
+        (function(){
+          const breakpoints = {
+            xxs:320, xs:380, sm:640, md:768, lg:1024, xl:1280, '2xl':1440, '3xl':1640, '4xl':1840
+          };
+          const width = window.innerWidth;
+          let bp = 'xxs';
+          for (const key of Object.keys(breakpoints).reverse()) {
+            if (width >= breakpoints[key]) { bp = key; break; }
+          }
+          // store in global window and data-attribute
+          window.__INITIAL_WIDTH__ = width;
+          window.__INITIAL_BREAKPOINT__ = bp;
+          document.documentElement.dataset.viewport = bp;
+        })();
+
+        const initialBreakpoint = document.documentElement.dataset.viewport;
+        console.log('Initial breakpoint:', initialBreakpoint);
+      `,
+    });
+
+    // Add custom fonts
+    nuxt.options.app.head = nuxt.options.app.head || {};
+    nuxt.options.app.head.link = nuxt.options.app.head.link || [];
+    nuxt.options.app.head.link.push(
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
+      { 
+        rel: 'stylesheet', 
+        href: 'https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap'
+      }
+    );
+
+    /**
+     * register components
+     */
+    const {resolve} = createResolver(import.meta.url);
+
+    const components = [
+      {
+        name: 'HomeEyeCatcher',
+        path: 'HomeEyeCatcher/HomeEyeCatcher.vue',
+        global: false,
+      },
+    ];
+
+    for (const { name, path, global } of components) {
+      await addComponent({
+        name,
+        filePath: resolve(`./runtime/components/${path}`),
+        ...(global === false ? { global: false } : {}),
+      });
+    }
+
+
+    // customJS (not needed at the moment)
+    // addPlugin(resolve('./runtime/plugins/customJS'));
+
+    /**
+     * override components
+     */
+    nuxt.hook('components:extend', (components) => {
+      // Header
+      const Header = components.find((c) => c.pascalName === 'UiHeader');
+      if (Header) {
+        Header.filePath = resolve('./runtime/components/ui/Header/HeaderCyt.vue');
+      }
+    });
+
+    /**
+     * override tailwindcss config
+     */
+    nuxt.hook('tailwindcss:config', (config) => {
+      // Colors
+      if (config?.theme?.extend?.colors) {
+        (config.theme.extend.colors as any)['primary']['500'] = '#00A4CC';
+        (config.theme.extend.colors as any)['secondary']['500'] = '#000';
+      }
+
+      // FontFamily
+      if (config?.theme?.extend) {
+        // Set Figtree as the default font
+        config.theme.extend.fontFamily = {
+          ...config.theme.extend.fontFamily,
+          sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+          body: ['Figtree', ...defaultTheme.fontFamily.sans],
+        };
+      }
+
+      // Screens
+      if (config?.theme?.extend?.screens) {
+        (config.theme.extend.screens as any).xxs = '320px';
+        (config.theme.extend.screens as any).xs = '380px';
+        (config.theme.extend.screens as any).sm = '640px';
+        (config.theme.extend.screens as any).md = '768px';
+        (config.theme.extend.screens as any).lg = '1024px';
+        (config.theme.extend.screens as any).xl = '1280px';
+        (config.theme.extend.screens as any)['2xl'] = '1440px';
+        (config.theme.extend.screens as any)['3xl'] = '1640px';
+        (config.theme.extend.screens as any)['4xl'] = '1840px';
+      }
+    });
+
+    /**
+     * override layouts
+     */
+    nuxt.hook('app:resolve', (app) => {
+      // default
+      app.layouts['default'] = {
+        name: 'default',
+        file: resolve('./runtime/layouts/defaultCyt.vue'),
+      };
+    });
+
+    /**
+     * override pages
+     */
+    extendPages((pages: NuxtPage[]) => {
+      // console.log(pages);
+
+      // Homepage
+      const overrideHomePage = pages.find((p) => p.name === 'index');
+      if (overrideHomePage) {
+        overrideHomePage.file = resolve('./runtime/pages/homepage/indexCyt.vue');
+      }
+
+      // Contentpages
+      const customPages = [
+        { name: 'aboutUs', file: 'AboutUs.vue', path: '/ueber-uns' },
+      ];
+      customPages.forEach(({ name, file, path }) => {
+        pages.push({
+          name,
+          file: resolve(`./runtime/pages/contentpages/${file}`),
+          path,
+        });
+      });
+    });
+
+    /**
+     * extend i18n
+     */
+    nuxt.hook('i18n:registerModule', (register) => {
+      register({
+        langDir: resolve('./runtime/lang'),
+        locales: [
+          {
+            code: 'de',
+            file: 'de.json',
+          },
+        ],
+      });
+    });
+  },
+});
