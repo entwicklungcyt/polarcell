@@ -11,10 +11,10 @@ jobs:
   fetch-data:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout gh-pages
+      - name: Checkout ts-workflow
         uses: actions/checkout@v6
         with:
-          ref: gh-pages
+          ref: ts-workflow
 
       - name: Setup Node
         uses: actions/setup-node@v4
