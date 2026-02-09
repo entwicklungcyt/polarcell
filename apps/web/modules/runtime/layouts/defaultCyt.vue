@@ -1,5 +1,5 @@
 <template>
-  <div class="font-light">
+  <div class="overflow-clip">
     <UiHeader />
     <main class="max-w-screen-3xl mx-auto">
       <slot />
@@ -27,8 +27,12 @@ setLogoMeta();
 </script>
 
 <style lang="scss">
+  body.bg-editor-body-bg {
+    background-color: white;
+  }
+
   body.hydrated {
-    overflow-x: hidden;
+    overflow-x: clip;
   }
 
   [data-testid="checkout-layout"],

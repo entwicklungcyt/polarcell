@@ -1,5 +1,12 @@
 <template>
-  <div :class="{ 'sticky top-0 bg-white z-[11] animate-slide-down is-slim-header border-b border-[#e5e5e5] lg:[&_header]:pb-0 lg:[&_nav>ul]:pt-0 lg:[&_nav>ul>li>a>span]:pb-[20px] lg:[&_nav>a]:pb-[20px] lg:[&_nav>span]:pb-[20px]': isSlimHeader }">
+  <Ticker />
+  <div 
+    :class="{
+      'bg-panther': route.fullPath != '/',
+      'sticky top-0 bg-black z-[11] animate-slide-down is-slim-header border-b border-black lg:[&_header]:pb-0 lg:[&_nav>ul]:pt-0 lg:[&_nav>ul>li>a>span]:pb-[20px] lg:[&_nav>span]:pb-[20px] border-b border-[#333]': isSlimHeader
+    }" 
+    class="bg-black bg-contain bg-right bg-no-repeat"
+  >
     <MegaMenu :categories="categoryTree" :isSlimHeader="isSlimHeader"></MegaMenu>
   </div>
   <UiModal
@@ -25,6 +32,12 @@
 </template>
 
 <style>
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; }
+  4%, 46% { opacity: 1; }
+  54% { opacity: 0; }
+}
+
 .animate-slide-down {
   animation: slideDown 0.3s ease-in-out;
 }
@@ -42,6 +55,10 @@
   > div {
     width: 100% !important;
   }
+}
+
+.bg-panther {
+  background-image: url('https://cdn02.plentymarkets.com/91tuepbzlonh/frontend/pwa/blackpanther_sm.avif');
 }
 </style>
 

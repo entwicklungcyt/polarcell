@@ -1,7 +1,19 @@
 <template>
   <div class="w-full max-w-screen-3xl mx-auto px-[20px] relative">
-    <!-- Banner Slider-->
-    <HomeEyeCatcher />
+    <!-- Home Eye Catcher -->
+    <HomeEyeCatcher :categories="categoryTree" />
+
+    <!-- Finder -->
+    <Finder :categories="categoryTree" />
+
+    <!-- Second Level Categories -->
+    <SecondLevelCategories :categories="categoryTree" />
+
+    <!-- Recommended Products -->
+    <RecommendedProducts categoryId="74" cacheKey="homepage" headline="Unsere Topseller Handy-Akkus" class="pt-[45px] xl:pt-[60px] 4xl:pt-[80px]" />
+
+    <!-- Trusted Shops -->
+    <TrustedShops />
   </div>
 </template>
 
@@ -46,4 +58,6 @@ setRobotForStaticPage('Homepage');
 
 const { setBlocksListContext } = useBlocksList();
 setBlocksListContext('content');
+
+const { data: categoryTree } = useCategoryTree();
 </script>
