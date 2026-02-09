@@ -82,8 +82,18 @@ export default defineNuxtModule({
         global: false,
       },
       {
+        name: 'HomeCategories',
+        path: 'HomeCategories/HomeCategories.vue',
+        global: false,
+      },
+      {
         name: 'TrustedShops',
         path: 'TrustedShops/TrustedShops.vue',
+        global: false,
+      },
+      {
+        name: 'Seo',
+        path: 'Seo/Seo.vue',
         global: false,
       },
     ];

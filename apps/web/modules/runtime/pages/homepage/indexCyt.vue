@@ -9,11 +9,17 @@
     <!-- Second Level Categories -->
     <SecondLevelCategories :categories="categoryTree" />
 
+    <!-- Home Categories -->
+    <HomeCategories />
+
     <!-- Recommended Products -->
     <RecommendedProducts categoryId="74" cacheKey="homepage" headline="Unsere Topseller Handy-Akkus" class="pt-[45px] xl:pt-[60px] 4xl:pt-[80px]" />
 
     <!-- Trusted Shops -->
     <TrustedShops />
+
+    <!-- Seo -->
+    <Seo />
   </div>
 </template>
 

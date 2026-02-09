@@ -34,9 +34,31 @@
         "Button": "Ergebnisse anzeigen",
         "ButtonCount1": "Ergebniss anzeigen"
     },
+    "HomeCategories": {
+        "01": {
+            "name": "Handy-Akkus",
+            "url": "/handy-akkus",
+            "img": "https://placehold.co/1000x650/e8cb48/e8cb48"
+        },
+        "02": {
+            "name": "Kamera-Akkus",
+            "url": "/kamera-akkus",
+            "img": "https://placehold.co/1000x650/fb8e33/fb8e33"
+        },
+        "03": {
+            "name": "Standard-Akkus",
+            "url": "/standard-akkus",
+            "img": "https://placehold.co/1000x650/00A4CC/00A4CC"
+        }
+    },
     "TrustedShops": {
         "Bewertung1": "Bewertungen (letzte 12 Mon.)",
         "Bewertung2": "Bewertungen (gesamt)",
         "Stand": "Stand:"
+    },
+    "Seo": {
+        "Titel": "PolarCell – Die Premium Akkumarke",
+        "Beschreibung": "[p][strong]Seit über 20 Jahren ist es unser Ziel unseren Kunden Akkus von höchster Qualität, Kapazität und Sicherheit zur Verfügung zu stellen.[/strong][/p] Als einer der wenigen deutschen Akkuhändler verfügen wir daher über ein eigenes Akkuprüflabor, in welchem unser qualifiziertes Fachpersonal täglich dafür sorgt, Ihnen als Endkunde nur die hochwertigsten und sichersten Produkte anbieten zu können. Zur Abgrenzung gegenüber marktüblicher „Billigware“ wurde daher im Jahre 2005 die Premium-Marke PolarCell ins Leben gerufen und steht seit dem für High-End Produkte im Akkumulatoren-Bereich.",
+        "Bild": "https://cdn02.plentymarkets.com/91tuepbzlonh/frontend/pwa/eyecatcher.avif"
     }
 }

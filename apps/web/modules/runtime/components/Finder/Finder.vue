@@ -89,7 +89,7 @@ const { buildCategoryMenuLink } = useLocalization();
 
 // Selected category IDs at each level
 const selectedLevel1 = ref<number | null>(74);
-const selectedLevel2 = ref<number | null>(90);
+const selectedLevel2 = ref<number | null>(null);
 const selectedLevel3 = ref<number | null>(null);
 
 // Level 1: Top-level categories
