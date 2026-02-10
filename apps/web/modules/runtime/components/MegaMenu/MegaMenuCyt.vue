@@ -94,7 +94,7 @@
           data-testid="wishlist-page-navigation"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><g transform="translate(0 0)"><path d="M19.487,2.639a2.4,2.4,0,0,0-1.9-.93H4.249A3.222,3.222,0,0,0,.6.1a.806.806,0,0,0,.4,1.561A1.612,1.612,0,0,1,2.969,2.821l1.8,7.121a4.018,4.018,0,0,0,3.9,3.053h6.043a4.018,4.018,0,0,0,3.9-3.053l1.305-5.228a2.4,2.4,0,0,0-.439-2.075" fill="#00a4cc"/><path d="M9.653,17.4a2.6,2.6,0,1,1-2.6-2.6,2.6,2.6,0,0,1,2.6,2.6" fill="#00a4cc"/><path d="M18.321,17.4a2.6,2.6,0,1,1-2.6-2.6,2.6,2.6,0,0,1,2.6,2.6" fill="#00a4cc"/></g></svg>
-          <span class="badge font-bold text-white text-[14px]" data-testid="cart-badge">{{ cartItemsCount }}</span>
+          <span v-if="cartItemsCount > 0" class="badge font-bold text-white text-[14px]" data-testid="cart-badge">{{ cartItemsCount }}</span>
         </NuxtLink>
       </div>
 

@@ -17,7 +17,7 @@
         Batterien dürfen nicht über den Hausmüll entsorgt werden. Sie sind zur Rückgabe von Altbatterien gesetzlich verpflichtet, damit eine fachgerechte Entsorgung gewährleistet werden kann. Sie können Altbatterien an einer kommunalen Sammelstelle oder im Handel vor Ort abgeben. Auch wir sind als Vertreiber von Batterien zur Rücknahme von Altbatterien verpflichtet, wobei sich unsere Rücknahmeverpflichtung auf Altbatterien der Art beschränkt, die wir als Neubatterien in unserem Sortiment führen oder geführt haben. Altbatterien vorgenannter Art können Sie daher entweder ausreichend frankiert an uns zurücksenden oder sie direkt an unserem Versandlager unter der folgenden Adresse unentgeltlich abgeben:
       </p>
 
-      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg">
+      <div class="bg-primary-50 border-l-4 border-primary-500 p-6 rounded-r-lg">
         <p class="text-gray-900 font-medium leading-relaxed">
           Wannsee-Electronic GmbH<br>
           Barnhelmstr. 17d<br>
@@ -47,7 +47,7 @@
     <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 mt-8">
       <div class="flex items-start gap-3">
         <svg 
-          class="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5" 
+          class="w-6 h-6 text-red-500 flex-shrink-0 mt-0.5" 
           fill="none" 
           stroke="currentColor" 
           viewBox="0 0 24 24"

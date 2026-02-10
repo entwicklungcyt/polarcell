@@ -71,10 +71,12 @@
         <div class="grid gap-[10px] leading-[1.25] pt-[40px] xl:pt-0 xl:ml-auto xl:grow-0">
           <p class="text-[18px] font-extrabold italic">{{ t('Footer.Sicherheit') }}</p>
           <div class="flex gap-[15px] 2xl:gap-[20px] pt-[10px] xl:grid xl:grid-cols-2">
-            <img class="rounded-[50%] w-[70px] h-[70px]" src="https://placehold.co/140x140/fff/fff" alt="">
-            <img class="rounded-[50%] w-[70px] h-[70px]" src="https://placehold.co/140x140/fff/fff" alt="">
-            <img class="rounded-[50%] w-[70px] h-[70px]" src="https://placehold.co/140x140/fff/fff" alt="">
-            <img class="rounded-[50%] w-[70px] h-[70px]" src="https://placehold.co/140x140/fff/fff" alt="">
+            <NuxtLink to="https://www.trustedshops.de/bewertung/info_X225BDEA0D9756BF24885264CC998C798.html" target="_blank">
+              <img class="rounded-[50%] w-[70px] h-[70px] border border-white" src="https://cdn02.plentymarkets.com/91tuepbzlonh/frontend/pwa/ts-badge.png" alt="">
+            </NuxtLink>
+            <img class="rounded-[50%] w-[70px] h-[70px] border border-white" src="https://placehold.co/140x140/fff/fff" alt="">
+            <img class="rounded-[50%] w-[70px] h-[70px] border border-white" src="https://placehold.co/140x140/fff/fff" alt="">
+            <img class="rounded-[50%] w-[70px] h-[70px] border border-white" src="https://placehold.co/140x140/fff/fff" alt="">
           </div>
         </div>
       </div>
