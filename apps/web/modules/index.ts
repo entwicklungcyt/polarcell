@@ -215,7 +215,11 @@ export default defineNuxtModule({
 
       // Contentpages
       const customPages = [
-        { name: 'aboutUs', file: 'AboutUs.vue', path: '/ueber-uns' },
+        { name: 'unternehmen', file: 'Unternehmen.vue', path: '/unternehmen' },
+        { name: 'herstellergarantie', file: 'Herstellergarantie.vue', path: '/herstellergarantie' },
+        { name: 'versandinformationen', file: 'Versandinformationen.vue', path: '/versandinformationen' },
+        { name: 'batterieentsorgung', file: 'Batterieentsorgung.vue', path: '/batterieentsorgung' },
+        { name: 'service', file: 'Service.vue', path: '/service' },
       ];
       customPages.forEach(({ name, file, path }) => {
         pages.push({

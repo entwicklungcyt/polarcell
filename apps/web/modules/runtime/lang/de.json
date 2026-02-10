@@ -9,8 +9,27 @@
         "Hotline": "+49 30 80498134",
         "Email": "{'service@polarcell.de'}",
         "Service-Zeiten": {
-            "1": "Deutscher Telefonsupport von Fachpersonal",
-            "2": "Sie erreichen uns:  Montag - Freitag:  9.00  - 17.00 Uhr"
+            "1": "[strong]Deutscher Telefonsupport[/strong] von Fachpersonal",
+            "2": "[strong]Sie erreichen uns:[/strong] Montag - Freitag:  9.00  - 17.00 Uhr"
+        },
+        "Straße": "Barnhelmstraße 17d",
+        "PLZ Ort": "14129 Berlin",
+        "Listen Überschriften": {
+            "1": "Informationen",
+            "2": "Über uns"
+        },
+        "Link Titel": {
+            "1": "Herstellergarantie",
+            "2": "Versandinformationen",
+            "3": "Batterieentsorgung",
+            "4": "Service",
+            "5": "Unternehmen"
+        },
+        "Sicherheit": "Sicher einkaufen",
+        "copyRight": {
+            "1": "Alle Preise sind {inclExcl} und zzgl. {Versandkosten}.",
+            "2": "Kostenloser Standardversand innerhalb Deutschlands.",
+            "3": "Polarcell. Alle Rechte vorbehalten."
         }
     },
     "HomeEyeCatcher": {
