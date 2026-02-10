@@ -1,6 +1,12 @@
 <template>
   <footer data-testid="footer" class="bg-black text-white mt-[40px] xl:mt-[80px] 4xl:mt-[120px]">
-    <div class="flex justify-center items-center py-[20px]">Footer</div>
+    <div class="py-[20px]">
+      <div>
+        <div>{{ companyName }}</div>
+      </div>
+    </div>
+
+    <!-- viewport info when localhost -->
     <span v-if="isDev" class="bg-black text-white flex items-center justify-center fixed right-2 bottom-2 rounded-[50%] w-[30px] h-[30px] px-2 py-1 border border-neutral-200 z-[1000] font-bold text-xs">
       <span class="xs:hidden">XXS</span>
       <span class="hidden xs:block sm:hidden">XS</span>
@@ -12,6 +18,7 @@
       <span class="hidden 3xl:block 4xl:hidden">3XL</span>
       <span class="hidden 4xl:block">4XL</span>
     </span>
+
   </footer>
 </template>
 

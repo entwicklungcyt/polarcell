@@ -40,16 +40,4 @@ setLogoMeta();
     max-width: 1640px;
     margin: 0 auto;
   }
-
-  [data-testid="checkout-button"] {
-    + div {
-      &::before {
-        content: "Oder";
-        display: block;
-        text-align: center;
-        padding-bottom: 10px;
-        font-size: 14px;
-      }
-    }
-  }
 </style>
