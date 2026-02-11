@@ -4,16 +4,22 @@
     <HomeEyeCatcher :categories="categoryTree" />
 
     <!-- Finder -->
-    <Finder :categories="categoryTree" />
+    <Finder v-if="categoryTree && categoryTree.length > 0" :categories="categoryTree" />
 
     <!-- Second Level Categories -->
-    <SecondLevelCategories :categories="categoryTree" />
+    <SecondLevelCategories v-if="categoryTree && categoryTree.length > 0" :categories="categoryTree" />
 
     <!-- Home Categories -->
     <HomeCategories />
 
     <!-- Recommended Products -->
     <RecommendedProducts categoryId="74" cacheKey="homepage" headline="Unsere Topseller Handy-Akkus" class="pt-[45px] xl:pt-[60px] 4xl:pt-[80px]" />
+
+    <!-- USP Slider -->
+    <UspSlider />
+
+    <!-- FAQs -->
+    <Faqs />
 
     <!-- Trusted Shops -->
     <TrustedShops />

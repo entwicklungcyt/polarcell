@@ -136,7 +136,7 @@ const swiperOptions = {
   slidesPerView: 1.5,
   spaceBetween: 10,
   loop: true,
-  speed: 1000,
+  speed: 500,
   autoplay: {
     delay: 16000,
     disableOnInteraction: false,

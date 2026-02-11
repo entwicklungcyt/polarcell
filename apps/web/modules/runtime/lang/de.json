@@ -60,14 +60,14 @@
             "img": "https://placehold.co/1000x650/e8cb48/e8cb48"
         },
         "02": {
-            "name": "Kamera-Akkus",
-            "url": "/kamera-akkus",
-            "img": "https://placehold.co/1000x650/fb8e33/fb8e33"
-        },
-        "03": {
             "name": "Standard-Akkus",
             "url": "/standard-akkus",
             "img": "https://placehold.co/1000x650/00A4CC/00A4CC"
+        },
+        "03": {
+            "name": "Zubehör",
+            "url": "/handy-akkus/zubehoer",
+            "img": "https://placehold.co/1000x650/fb8e33/fb8e33"
         }
     },
     "TrustedShops": {
@@ -79,5 +79,23 @@
         "Titel": "PolarCell – Die Premium Akkumarke",
         "Beschreibung": "[p][strong]Seit über 20 Jahren ist es unser Ziel unseren Kunden Akkus von höchster Qualität, Kapazität und Sicherheit zur Verfügung zu stellen.[/strong][/p] Als einer der wenigen deutschen Akkuhändler verfügen wir daher über ein eigenes Akkuprüflabor, in welchem unser qualifiziertes Fachpersonal täglich dafür sorgt, Ihnen als Endkunde nur die hochwertigsten und sichersten Produkte anbieten zu können. Zur Abgrenzung gegenüber marktüblicher „Billigware“ wurde daher im Jahre 2005 die Premium-Marke PolarCell ins Leben gerufen und steht seit dem für High-End Produkte im Akkumulatoren-Bereich.",
         "Bild": "https://cdn02.plentymarkets.com/91tuepbzlonh/frontend/pwa/eyecatcher.avif"
+    },
+    "Faq": {
+        "Title": "Häufig gestellte Fragen",
+        "Faqs": {
+            "test": "test",
+            "01": {
+                "question": "Wie lange halten PolarCell-Akkus?",
+                "answer": "Die Haltbarkeit eines Akkus hängt von verschiedenen Faktoren ab, wie z.B. der Nutzung, dem Wetter und der Qualität des Akkus. Im Allgemeinen halten PolarCell-Akkus länger als andere Akkus, da sie aus hochwertigen Materialien hergestellt werden und eine lange Lebensdauer haben."
+            },
+            "02": {
+                "question": "Sed ut perspiciatis unde omnis iste natus?",
+                "answer": "Nemo enim ipsam voluptatem quia voluptas sit [strong]aspernatur aut odit aut fugit[/strong], sed quia consequuntur magni eos qui ratione voluptatem.  Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, numquam eius modi tempora incidunt ut labore et dolore. [a:/unternehmen]Nemo enim  ipsam voluptatem[/a] quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni eos qui ratione voluptatem. Neque porro  quisquam est, qui dolorem ipsum quia dolor sit amet, numquam eius modi tempora incidunt ut labore et dolore. Nemo enim ipsam voluptatem  quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni eos qui ratione voluptatem. Neque porro quisquam est, qui  dolorem ipsum quia dolor sit amet, numquam eius modi tempora incidunt ut labore et dolore. Nemo enim ipsam voluptatem quia voluptas sit  aspernatur aut odit aut fugit, sed quia consequuntur magni eos qui ratione voluptatem. Neque porro quisquam est, qui dolorem ipsum quia  dolor sit amet, numquam eius modi tempora incidunt ut labore et dolore. "
+            },
+            "03": {
+                "question": "Corporis suscipit nisi ut  aliquid ea commodi consequatur?",
+                "answer": "Die Haltbarkeit eines Akkus hängt von verschiedenen Faktoren ab, wie z.B. der Nutzung, dem Wetter und der Qualität des Akkus. Im Allgemeinen halten PolarCell-Akkus länger als andere Akkus, da sie aus hochwertigen Materialien hergestellt werden und eine lange Lebensdauer haben."
+            }
+        }
     }
 }

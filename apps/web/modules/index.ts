@@ -92,6 +92,16 @@ export default defineNuxtModule({
         global: false,
       },
       {
+        name: 'UspSlider',
+        path: 'UspSlider/UspSlider.vue',
+        global: false,
+      },
+      {
+        name: 'Faqs',
+        path: 'Faqs/Faqs.vue',
+        global: false,
+      },
+      {
         name: 'Seo',
         path: 'Seo/Seo.vue',
         global: false,

@@ -31,18 +31,13 @@
         />
       </SfLink>
     </div>
-    <div class="flex flex-col flex-auto text-[14px] md:text-[16px] lg:text-[18px] leading-[1.25] pt-[10px] sm:pt-[20px]" @click="navigateTo(productPath)">
-      <!-- variation property "kollektion" -->
-      <div v-if="hasProperty(4, 47)" class="text-[12px] font-semibold pb-[5px] xl:pb-[10px]">
-        {{ getPropertyValue(4, 47).split(",")[0] }}
-      </div>
-
-      <div class="no-underline" data-testid="productcard-name">{{ name }}</div>
+    <div class="flex flex-col flex-auto text-[14px] md:text-[16px] lg:text-[18px] leading-[1.25] pt-[10px] sm:pt-[20px] xl:pt-[30px]" @click="navigateTo(productPath)">
+      <div class="no-underline xl:text-[21px]" data-testid="productcard-name">{{ name }}</div>
       <div class="flex items-start mt-auto gap-[10px] pt-[5px]">
-        <span class="block" data-testid="product-card-vertical-price">
+        <span class="block xl:text-[21px]" data-testid="product-card-vertical-price">
           <span class="font-extrabold">{{ format(price) }}</span>
         </span>
-        <span v-if="crossedPrice" class="line-through">
+        <span v-if="crossedPrice" class="line-through xl:text-[16px]">
           {{ format(crossedPrice) }}
         </span>
       </div>
