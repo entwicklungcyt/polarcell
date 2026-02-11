@@ -4,12 +4,20 @@
       <NuxtLink 
         :to="localePath(generateCategoryLink(child))"
         :class="buttonClasses"
+        v-tooltip:top="'in Kategorie ' + getTooltipText(child) + ' anzeigen'"
       >
         {{ child.details[0]?.name }}<!-- <span v-if="child.itemCount?.[0]?.count" class="text-sm text-gray-500 ml-1">({{ child.itemCount[0].count }})</span> -->
       </NuxtLink>
     </li>
   </ul>
 </template>
+
+<style>
+.v-tooltip > .v-overlay__content {
+  background: black !important;
+  color: white !important;
+}
+</style>
 
 <script lang="ts" setup>
 const buttonClasses = `
@@ -38,4 +46,10 @@ const generateCategoryLink = (category: CategoryTreeItem) => {
 const allChildren = computed(() => {
   return categoryTree.value.flatMap(parent => parent.children || []);
 });
+
+const getTooltipText = (child: CategoryTreeItem) => {
+  const link = generateCategoryLink(child);
+  const firstSegment = link.split('/').filter(Boolean)[0] || '';
+  return firstSegment.toUpperCase();
+};
 </script>
