@@ -1,5 +1,5 @@
 <template>
-    <div class="pt-[35px] xl:pt-[60px] xl:pt-[100px] grid gap-[20px] xl:gap-[40px]">
+    <div v-if="hasFaqs" class="pt-[35px] xl:pt-[60px] xl:pt-[100px] grid gap-[20px] xl:gap-[40px]">
         <h2 class="text-[18px] xl:text-[24px] 2xl:text-[30px] font-extrabold italic text-center">{{ $t('Faq.Title') }}</h2>
         <ul class="grid gap-[10px] xl:gap-[20px]">
             <template v-for="(faq, key) in faqs" :key="key">
@@ -14,9 +14,10 @@
             </template>
         </ul>
     </div>
-</template>
+</template> 
 
 <script lang="ts" setup>
+import { computed } from 'vue';
 import { useRichTranslation } from '../../composables/useRichTranslation';
 const { rt } = useRichTranslation();
 
@@ -63,4 +64,6 @@ const faqs = [
         answer: rt('Faq.Faqs.10.answer')
     }
 ]
+
+const hasFaqs = computed(() => faqs.some(faq => faq.question.trim() !== '' && faq.answer.trim() !== ''));
 </script>
