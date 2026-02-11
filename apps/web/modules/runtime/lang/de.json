@@ -77,7 +77,7 @@
     },
     "Seo": {
         "Titel": "PolarCell – Die Premium Akkumarke",
-        "Beschreibung": "[p][strong]Seit über 20 Jahren ist es unser Ziel unseren Kunden Akkus von höchster Qualität, Kapazität und Sicherheit zur Verfügung zu stellen.[/strong][/p] Als einer der wenigen deutschen Akkuhändler verfügen wir daher über ein eigenes Akkuprüflabor, in welchem unser qualifiziertes Fachpersonal täglich dafür sorgt, Ihnen als Endkunde nur die hochwertigsten und sichersten Produkte anbieten zu können. Zur Abgrenzung gegenüber marktüblicher „Billigware“ wurde daher im Jahre 2005 die Premium-Marke PolarCell ins Leben gerufen und steht seit dem für High-End Produkte im Akkumulatoren-Bereich.",
+        "Beschreibung": "[p][strong]Seit über 20 Jahren ist es unser Ziel unseren Kunden Akkus von höchster Qualität, Kapazität und Sicherheit zur Verfügung zu stellen.[/strong][/p][p]Als einer der wenigen deutschen Akkuhändler verfügen wir daher über ein eigenes Akkuprüflabor, in welchem unser qualifiziertes Fachpersonal täglich dafür sorgt, Ihnen als Endkunde nur die hochwertigsten und sichersten Produkte anbieten zu können. Zur Abgrenzung gegenüber marktüblicher „Billigware“ wurde daher im Jahre 2005 die Premium-Marke PolarCell ins Leben gerufen und steht seit dem für High-End Produkte im Akkumulatoren-Bereich.[/p]",
         "Bild": "https://cdn02.plentymarkets.com/91tuepbzlonh/frontend/pwa/eyecatcher.avif"
     },
     "Faq": {
@@ -95,6 +95,34 @@
             "03": {
                 "question": "Corporis suscipit nisi ut  aliquid ea commodi consequatur?",
                 "answer": "Die Haltbarkeit eines Akkus hängt von verschiedenen Faktoren ab, wie z.B. der Nutzung, dem Wetter und der Qualität des Akkus. Im Allgemeinen halten PolarCell-Akkus länger als andere Akkus, da sie aus hochwertigen Materialien hergestellt werden und eine lange Lebensdauer haben."
+            },
+            "04": {
+                "question": "",
+                "answer": ""
+            },
+            "05": {
+                "question": "",
+                "answer": ""
+            },
+            "06": {
+                "question": "",
+                "answer": ""
+            },
+            "07": {
+                "question": "",
+                "answer": ""
+            },
+            "08": {
+                "question": "",
+                "answer": ""
+            },
+            "09": {
+                "question": "",
+                "answer": ""
+            },
+            "10": {
+                "question": "",
+                "answer": ""
             }
         }
     }

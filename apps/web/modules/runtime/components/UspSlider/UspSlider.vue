@@ -16,13 +16,13 @@
                         ">
                     </div>
                     <div class="px-[20px] min-w-0 lg:flex lg:flex-col lg:justify-center lg:order-[-1] 3xl:min-h-[600px] 3xl:relative">
-                        <div>
+                        <div class="3xl:max-w-[700px] 3xl:mx-auto">
                             <Swiper
-                                class="lg:min-w-0"
+                                class="lg:min-w-0 hover:cursor-grab active:cursor-grabbing"
                                 :modules="[Autoplay, Pagination]"
                                 :pagination="{ clickable: true, el: '.custom-pagination-usp' }"
                                 :slides-per-view="1"
-                                :autoplay="enableAutoplay && { delay: 8000, disableOnInteraction: false }"
+                                :autoplay="enableAutoplay && { delay: 8000, disableOnInteraction: false, pauseOnMouseEnter: true }"
                                 :loop="true"
                                 :speed="500"
                                 >
@@ -72,6 +72,16 @@
         width: 10px;
         height: 10px;
         margin: 0!important;
+    }
+</style>
+
+<style>
+    .swiper-wrapper {
+        cursor: grab;
+    }
+
+    .swiper-wrapper:active {
+        cursor: grabbing;
     }
 </style>
 

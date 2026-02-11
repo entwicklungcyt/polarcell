@@ -33,7 +33,7 @@
         <div class="links flex flex-col">
           <input type="checkbox" id="pc-account-footer">
           <label for="pc-account-footer" class="flex min-h-[30px] flex items-center text-[18px] font-extrabold italic whitespace-nowrap">{{ t('account.heading') }}</label>
-          <ul class="pb-[20px] leading-[2] whitespace-nowrap">
+          <ul class="pb-[20px] leading-[2.25] whitespace-nowrap">
             <li><NuxtLink :to="localePath(paths.account)">{{ t('account.heading') }}</NuxtLink></li>
             <li><NuxtLink :to="localePath(paths.accountMyOrders)">{{ t('account.ordersAndReturns.section.myOrders') }}</NuxtLink></li>
             <li><NuxtLink :to="localePath(paths.accountReturns)">{{ t('account.ordersAndReturns.section.returns') }}</NuxtLink></li>
@@ -43,7 +43,7 @@
         <div class="links flex flex-col">
           <input type="checkbox" id="my-information-footer">
           <label for="my-information-footer" class="flex min-h-[30px] flex items-center text-[18px] font-extrabold italic whitespace-nowrap">{{ t('Footer.Listen Überschriften.1') }}</label>
-          <ul class="pb-[20px] leading-[2] whitespace-nowrap">
+          <ul class="pb-[20px] leading-[2.25] whitespace-nowrap">
             <li><NuxtLink to="/herstellergarantie">{{ t('Footer.Link Titel.1') }}</NuxtLink></li>
             <li><NuxtLink to="/versandinformationen">{{ t('Footer.Link Titel.2') }}</NuxtLink></li>
             <li><NuxtLink :to="localePath(paths.cancellationRights)">{{ t('legal.cancellationRights') }}</NuxtLink></li>
@@ -56,7 +56,7 @@
         <div class="links flex flex-col">
           <input type="checkbox" id="pc-about-us-footer">
           <label for="pc-about-us-footer" class="flex min-h-[30px] flex items-center text-[18px] font-extrabold italic whitespace-nowrap">{{ t('Footer.Listen Überschriften.2') }}</label>
-          <ul class="pb-[20px] leading-[2] whitespace-nowrap">
+          <ul class="pb-[20px] leading-[2.25] whitespace-nowrap">
             <li><NuxtLink to="/service">{{ t('Footer.Link Titel.4') }}</NuxtLink></li>
             <li><NuxtLink to="/unternehmen">{{ t('Footer.Link Titel.5') }}</NuxtLink></li>
             <li><NuxtLink :to="localePath(paths.termsAndConditions)">{{ t('legal.termsAndConditions') }}</NuxtLink></li>

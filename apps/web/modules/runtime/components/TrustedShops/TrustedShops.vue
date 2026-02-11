@@ -42,6 +42,7 @@
       <div class="xl:min-w-0 pt-[30px] xl:pt-[60px] pl-[10px] sm:px-[20px] md:pr-0 lg:pr-[20px]">
         <div class="relative">
           <Swiper
+            class="hover:cursor-grab active:cursor-grabbing"
             v-bind="swiperOptions"
             @swiper="onSwiper"
             @slideChange="onSlideChange"
