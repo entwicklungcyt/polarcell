@@ -28,7 +28,7 @@
                                 >
                                 <SwiperSlide v-for="item in uspItems" :key="item.title" class="flex items-center justify-center text-center">
                                     <div class="flex flex-col gap-[20px] xl:gap-[40px] 3xl:h-full">
-                                        <h3 class="text-[36px] font-extrabold italic leading-[1.25] xl:text-[48px]" v-html="item.title"></h3>
+                                        <h3 class="text-[36px] font-extrabold italic leading-[1.25] 2xl:text-[48px]" v-html="item.title"></h3>
                                         <p class="text-[18px] xl:text-[24px]" v-html="item.description"></p>
                                         <a :href="item.link" class="
                                             px-[20px] xl:px-[40px]
@@ -47,10 +47,6 @@
                                 text-center 
                                 pt-[20px] 
                                 flex justify-center gap-[10px]
-                                3xl:absolute
-                                3xl:left-0
-                                3xl:right-0
-                                3xl:!bottom-[50px]
                             "></div>
                         </div>
                     </div>
@@ -95,44 +91,20 @@
 
     const uspItems = [
         {
-            title: 'Deutsche Markenware',
-            description: 'streng kontrolliert nach allen EU-Normen',
+            title: 'Umfangreiche Tests im Labor',
+            description: 'Als einer der wenigen deutschen Akku-Fachhändler verfügen wir über ein eigenes Akkulabor. Jede Charge durchläuft eine strikte Qualitätssicherung.',
             ctaText: 'Mehr erfahren',
             link: '/unternehmen'
         },
         {
-            title: 'Schneller Versand',
-            description: 'Bestellen Sie noch vor 16:00 Uhr und erhalten Sie Ihre Ware schon am nächsten Werktag!',
-            ctaText: 'Infos zum Versand',
-            link: '/versandinformationen'
-        },
-        {
-            title: '24 Monate Garantie',
-            description: 'Wir gewähren 2 Jahre Garantie auf die mit dem Garantieversprechen beworbene Ware',
-            ctaText: 'Mehr erfahren',
-            link: '/herstellergarantie'
-        },
-        {
-            title: 'Zuverlässige<br>Schutzschaltungs&shy;elektronik',
-            description: 'für Ihre Sicherheit',
+            title: 'Geprüfte Qualität. Maximale Sicherheit.',
+            description: 'Akkumulatoren sind Gefahrgut und erfordern Expertise im Handel. Unser Motto: Ihr Vertrauen ist gut, unsere Kontrolle ist besser!',
             ctaText: 'Mehr erfahren',
             link: '/unternehmen'
         },
         {
-            title: 'Beste Qualitätszellen',
-            description: 'für maximale Lebensdauer',
-            ctaText: 'Mehr erfahren',
-            link: '/unternehmen'
-        },
-        {
-            title: 'Große Auswahl',
-            description: 'speziell für alle gängigen Handymodelle',
-            ctaText: 'Mehr erfahren',
-            link: '/unternehmen'
-        },
-        {
-            title: 'Längere Laufzeit',
-            description: 'dank höherer Kapazität',
+            title: 'Kompetenz in Akkutechnologie seit 25 Jahren',
+            description: 'Produktqualität und -sicherheit stehen bei uns an erster Stelle. Wir sind technisch ausgebildete Experten – seit knapp 25 Jahren.',
             ctaText: 'Mehr erfahren',
             link: '/unternehmen'
         }

@@ -2,7 +2,7 @@
   <footer data-testid="footer" class="bg-black text-white mt-[40px] xl:mt-[80px] 4xl:mt-[120px] [&_a:hover]:text-primary-500">
     <!-- Upper part -->
     <div class="
-      p-[20px] pb-0 sm:pt-[40px] xl:pt-[70px]
+      p-[20px] pt-[30px] pb-0 sm:pt-[40px] xl:pt-[70px]
       max-w-[600px] xl:max-w-screen-3xl
       mx-auto
       xl:flex xl:justify-between xl:items-start

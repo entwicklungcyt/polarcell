@@ -1,5 +1,5 @@
 <template>
-    <div v-if="hasFaqs" class="pt-[35px] xl:pt-[60px] xl:pt-[100px] grid gap-[20px] xl:gap-[40px]">
+    <div v-if="hasFaqs" class="pt-[35px] xl:pt-[60px] xl:pt-[100px] grid gap-[20px] xl:gap-[40px] max-w-[1260px] mx-auto">
         <h2 class="text-[18px] xl:text-[24px] 2xl:text-[30px] font-extrabold italic text-center">{{ $t('Faq.Title') }}</h2>
         <ul class="grid gap-[10px] xl:gap-[20px]">
             <template v-for="(faq, key) in faqs" :key="key">
