@@ -1,7 +1,7 @@
 <template>
   <div class="max-w-screen-3xl mx-auto p-[20px] xl:pt-[40px] xl:pb-0">
     <div class="xl:flex xl:items-center xl:w-full">
-      <h1 class="text-[18px] lg:text-[24px] xl:text-[30px] font-extrabold italic text-ellipsis whitespace-nowrap overflow-hidden text-center">{{ title }} ({{ totalProducts }})</h1>
+      <h1 class="text-[18px] lg:text-[24px] xl:text-[30px] font-extrabold italic text-ellipsis whitespace-nowrap overflow-hidden text-center">{{ cleanCategoryName(title) }} ({{ totalProducts }})</h1>
       <span class="hidden xl:flex xl:ml-auto grow xl:justify-end">
         <slot name="sorting" />
       </span>
@@ -97,4 +97,9 @@ const viewport = useViewport();
 const maxVisiblePages = computed(() => (viewport.isGreaterOrEquals('lg') ? 5 : 2));
 
 if (viewport.isLessThan('md')) close();
+
+// Helper function to clean category names
+const cleanCategoryName = (name: string) => {
+  return name.replace(' - ', '-');
+};
 </script>

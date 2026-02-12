@@ -13,8 +13,7 @@
       @focus="open"
     >
       <template #suffix>
-        <SfLoaderCircular v-if="loading" />
-        <button v-else @click="handleSubmit" class="w-[40px] h-[40px] flex items-center justify-center">
+        <button @click="handleSubmit" class="w-[40px] h-[40px] flex items-center justify-center" :class="{'opacity-25' : loading }">
           <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path d="M10.516,1.481l0,0h0A5.073,5.073,0,0,0,2.719,7.9a1.046,1.046,0,0,0-.4.247L.268,10.2A1.088,1.088,0,0,0,1.8,11.732l2.05-2.048a1.064,1.064,0,0,0,.246-.4,5.075,5.075,0,0,0,6.418-7.8M8.976,7.12a2.9,2.9,0,1,1,.849-2.05,2.9,2.9,0,0,1-.849,2.05" transform="translate(0 0)"/></svg>
         </button>
       </template>
