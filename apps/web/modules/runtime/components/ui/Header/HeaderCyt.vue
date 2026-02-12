@@ -148,8 +148,10 @@ const handleScroll = () => {
       // But hide it when near the bottom to prevent flickering
       if (currentScrollY > SCROLL_THRESHOLD && isScrollingUp && !isNearBottom) {
         isSlimHeader.value = true;
+        document.body.classList.add('slim-header-active');
       } else {
         isSlimHeader.value = false;
+        document.body.classList.remove('slim-header-active');
       }
       
       lastScrollY = currentScrollY;

@@ -4,6 +4,7 @@
       <SfLoaderCircular v-if="loading" class="fixed top-[50%] right-0 left-0 m-auto z-[99999]" size="2xl" />
       <CategoryPageContent
         v-if="productsCatalog"
+        :is-search="true"
         :title="t('search.searchResults', { phrase: route.query.term })"
         :total-products="productsCatalog.pagination.totals"
         :products="productsCatalog.products"
@@ -13,6 +14,9 @@
           <CategorySorting />
           <CategoryItemsPerPage class="mt-6" :total-products="productsCatalog.pagination.totals" />
           <CategoryFilters v-if="facetGetters.hasFilters(productsCatalog.facets)" :facets="productsCatalog.facets" />
+        </template>
+        <template #sorting>
+          <CategorySorting />
         </template>
       </CategoryPageContent>
     </div>

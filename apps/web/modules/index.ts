@@ -5,44 +5,6 @@ import defaultTheme from 'tailwindcss/defaultTheme';
 
 export default defineNuxtModule({
   async setup(options, nuxt) {
-    /**
-     * Some inline JS before Nuxt app loads (for 1- or 2-column layout)
-     */
-    nuxt.options.app.head ||= {}
-    nuxt.options.app.head.script ||= []
-
-    nuxt.options.app.head.script.push({
-      type: 'text/javascript',
-      innerHTML: `
-        (function() {
-          try {
-            if (localStorage.getItem('singleColumn')) {
-              document.documentElement.classList.add('single-column');
-            }
-          } catch (e) {
-            // localStorage might be disabled, ignore error 
-          }
-        })();
-        (function(){
-          const breakpoints = {
-            xxs:320, xs:380, sm:640, md:768, lg:1024, xl:1280, '2xl':1440, '3xl':1640, '4xl':1840
-          };
-          const width = window.innerWidth;
-          let bp = 'xxs';
-          for (const key of Object.keys(breakpoints).reverse()) {
-            if (width >= breakpoints[key]) { bp = key; break; }
-          }
-          // store in global window and data-attribute
-          window.__INITIAL_WIDTH__ = width;
-          window.__INITIAL_BREAKPOINT__ = bp;
-          document.documentElement.dataset.viewport = bp;
-        })();
-
-        const initialBreakpoint = document.documentElement.dataset.viewport;
-        console.log('Initial breakpoint:', initialBreakpoint);
-      `,
-    });
-
     // Add custom fonts
     nuxt.options.app.head = nuxt.options.app.head || {};
     nuxt.options.app.head.link = nuxt.options.app.head.link || [];
@@ -106,6 +68,21 @@ export default defineNuxtModule({
         path: 'Seo/Seo.vue',
         global: false,
       },
+      {
+        name: 'NavChildren',
+        path: 'NavChildren/NavChildren.vue',
+        global: false,
+      },
+      {
+        name: 'NavChildrenLeft',
+        path: 'NavChildren/NavChildrenLeft.vue',
+        global: false,
+      },
+      {
+        name: 'BreadcrumbsCyt',
+        path: 'Breadcrumbs/BreadcrumbsCyt.vue',
+        global: true,
+      },
     ];
 
     for (const { name, path, global } of components) {
@@ -153,10 +130,30 @@ export default defineNuxtModule({
       if (ProductSlider) {
         ProductSlider.filePath = resolve('./runtime/components/ProductSlider/ProductSliderCyt.vue');
       }
+      // CategoryPageContent
+      const CategoryPageContent = components.find((c) => c.pascalName === 'CategoryPageContent');
+      if (CategoryPageContent) {
+        CategoryPageContent.filePath = resolve('./runtime/components/CategoryPageContent/CategoryPageContentCyt.vue');
+      }
+      // NarrowContainer
+      const NarrowContainer = components.find((c) => c.pascalName === 'NarrowContainer');
+      if (NarrowContainer) {
+        NarrowContainer.filePath = resolve('./runtime/components/NarrowContainer/NarrowContainerCyt.vue');
+      }
+      // CategorySorting
+      const CategorySorting = components.find((c) => c.pascalName === 'CategorySorting');
+      if (CategorySorting) {
+        CategorySorting.filePath = resolve('./runtime/components/CategorySortings/CategorySortingCyt.vue');
+      }
       // Footer
       const Footer = components.find((c) => c.pascalName === 'UiFooter');
       if (Footer) {
         Footer.filePath = resolve('./runtime/components/ui/Footer/FooterCyt.vue');
+      }
+      // Pagination
+      const Pagination = components.find((c) => c.pascalName === 'UiPagination');
+      if (Pagination) {
+        Pagination.filePath = resolve('./runtime/components/ui/Pagination/PaginationCyt.vue');
       }
     });
 
@@ -221,6 +218,12 @@ export default defineNuxtModule({
       const overrideSearchPage = pages.find((p) => p.name === 'search');
       if (overrideSearchPage) {
         overrideSearchPage.file = resolve('./runtime/pages/search/searchCyt.vue');
+      }
+
+      // CategoryPage
+      const overrideCategoryPage = pages.find((p) => p.name === 'slug');
+      if (overrideCategoryPage) {
+        overrideCategoryPage.file = resolve('./runtime/pages/category/[...slug]Cyt.vue');
       }
 
       // Contentpages

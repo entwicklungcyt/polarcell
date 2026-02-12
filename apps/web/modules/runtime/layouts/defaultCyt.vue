@@ -2,6 +2,9 @@
   <div class="overflow-clip">
     <UiHeader />
     <main class="max-w-screen-3xl mx-auto">
+      <!-- breadcrumbs -->
+       <BreadcrumbsCyt :breadcrumbs="breadcrumbs || []" />
+      <!-- content -->
       <slot />
     </main>
     <Cookiebar />
