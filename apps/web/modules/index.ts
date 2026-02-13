@@ -26,7 +26,7 @@ export default defineNuxtModule({
       {
         name: 'HomeEyeCatcher',
         path: 'HomeEyeCatcher/HomeEyeCatcher.vue',
-        global: false,
+        global: true,
       },
       {
         name: 'Ticker',
@@ -83,6 +83,16 @@ export default defineNuxtModule({
         path: 'Breadcrumbs/BreadcrumbsCyt.vue',
         global: true,
       },
+      {
+        name: 'CompatibilityChecker',
+        path: 'CompatibilityChecker/CompatibilityChecker.vue',
+        global: false,
+      },
+      {
+        name: 'GlobalAccessory',
+        path: 'GlobalAccessory/GlobalAccessory.vue',
+        global: false,
+      },
     ];
 
     for (const { name, path, global } of components) {
@@ -100,6 +110,11 @@ export default defineNuxtModule({
      * override components
      */
     nuxt.hook('components:extend', (components) => {
+      // Button
+      const Button = components.find((c) => c.pascalName === 'UiButton');
+      if (Button) {
+        Button.filePath = resolve('./runtime/components/ui/Button/ButtonCyt.vue');
+      }
       // Header
       const Header = components.find((c) => c.pascalName === 'UiHeader');
       if (Header) {
@@ -124,6 +139,36 @@ export default defineNuxtModule({
       const ProductCard = components.find((c) => c.pascalName === 'UiProductCard');
       if (ProductCard) {
         ProductCard.filePath = resolve('./runtime/components/ui/ProductCard/ProductCardCyt.vue');
+      }
+      // Gallery
+      const Gallery = components.find((c) => c.pascalName === 'Gallery');
+      if (Gallery) {
+        Gallery.filePath = resolve('./runtime/components/Gallery/GalleryCyt.vue');
+      }
+      // ZoomableImage
+      const ZoomableImage = components.find((c) => c.pascalName === 'ZoomableImage');
+      if (ZoomableImage) {
+        ZoomableImage.filePath = resolve('./runtime/components/ZoomableImage/ZoomableImageCyt.vue');
+      }
+      // Drift
+      const Drift = components.find((c) => c.pascalName === 'Drift');
+      if (Drift) {
+        Drift.filePath = resolve('./runtime/components/Drift/DriftCyt.vue');
+      }
+      // PurchaseCard
+      const PurchaseCard = components.find((c) => c.pascalName === 'UiPurchaseCard');
+      if (PurchaseCard) {
+        PurchaseCard.filePath = resolve('./runtime/components/ui/PurchaseCard/PurchaseCardCyt.vue');
+      }
+      // QuantitySelector
+      const QuantitySelector = components.find((c) => c.pascalName === 'UiQuantitySelector');
+      if (QuantitySelector) {
+        QuantitySelector.filePath = resolve('./runtime/components/ui/QuantitySelector/QuantitySelectorCyt.vue');
+      }
+      // Price
+      const Price = components.find((c) => c.pascalName === 'Price');
+      if (Price) {
+        Price.filePath = resolve('./runtime/components/Price/PriceCyt.vue');
       }
       // ProductSlider
       const ProductSlider = components.find((c) => c.pascalName === 'ProductSlider');
@@ -224,6 +269,12 @@ export default defineNuxtModule({
       const overrideCategoryPage = pages.find((p) => p.name === 'slug');
       if (overrideCategoryPage) {
         overrideCategoryPage.file = resolve('./runtime/pages/category/[...slug]Cyt.vue');
+      }
+
+      // ProductPage
+      const overrideProductPage = pages.find((p) => p.name === 'product-slug');
+      if (overrideProductPage) {
+        overrideProductPage.file = resolve('./runtime/pages/product/[slug]Cyt.vue');
       }
 
       // Contentpages

@@ -34,7 +34,7 @@
     },
     "HomeEyeCatcher": {
         "text1": "Die Premium Marke für",
-        "text2": "Die Premium+Akkumarke",
+        "text2": "Die Premium +Akkumarke",
         "text3": "Ihr Hersteller für mobile Energie",
         "usps": {
             "1": "[Beste Qualitätszellen]+für eine maximale+Lebensdauer",
@@ -124,6 +124,20 @@
                 "question": "",
                 "answer": ""
             }
+        }
+    },
+    "Produktseite": {
+        "Versand": "Kostenloser Versand**",
+        "Kompatibilitäts-Checker": {
+            "title": "Kompatibilitäts-Checker",
+            "text1": "Passt dieser Akku?",
+            "text2": "Passt dieser Akku in mein Gerät?",
+            "button": "Kompatibilität prüfen"
+        },
+        "Fragen": {
+            "01": "Sie haben Fragen? Unser Kundencenter hilft!",
+            "02": "Kontaktformular",
+            "03": "Telefon"
         }
     }
 }

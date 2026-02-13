@@ -1,21 +1,21 @@
 <template>
-  <div class="bg-black w-screen -mx-[50vw] relative left-1/2 text-white bg-[url('https://cdn02.plentymarkets.com/91tuepbzlonh/frontend/pwa/blackpanther_lg.avif')] bg-contain bg-right 2xl:bg-right-top 2xl:bg-[auto_75%] 4xl:bg-[auto_90%] bg-no-repeat">
-    <div class="max-w-screen-3xl mx-auto px-[20px] pt-[10px] pb-[45px] lg:py-[80px]">
+  <div :class="{ '!bg-fixed !bg-right 2xl:!bg-right small:!bg-[auto_25%] md:!bg-[auto_50%] 2xl:!bg-[auto_30%] 4xl:!bg-[auto_35%]': isItemView }" class="bg-black w-screen -mx-[50vw] relative left-1/2 text-white bg-[url('https://cdn02.plentymarkets.com/91tuepbzlonh/frontend/pwa/blackpanther_lg.avif')] bg-contain bg-right 2xl:bg-right-top 2xl:bg-[auto_75%] 4xl:bg-[auto_90%] bg-no-repeat">
+    <div :class="{'pt-[40px]': isItemView }" class="max-w-screen-3xl mx-auto px-[20px] pt-[10px] pb-[45px] lg:py-[80px]">
       <div class="flex flex-col">
-        <div class="text-center uppercase lg:text-left">
-          <h1 class="text-[48px] font-black italic leading-[1] lg:text-[8cqw] lg:leading-[8cqw] xl:text-[100px] xl:leading-[100px]">Polarcell</h1>
-          <h2 v-if="viewport.isLessThan('lg')" class="text-[18px] font-extrabold italic text-primary-500 " v-html="formatText(t('HomeEyeCatcher.text1'))"></h2>
-          <h2 v-else class="text-[18px] font-extrabold italic text-primary-500 lg:text-[8cqw] lg:leading-[8cqw] xl:text-[100px] xl:leading-[100px]" v-html="formatText(t('HomeEyeCatcher.text2'))"></h2>
-          <h3 v-if="viewport.isGreaterOrEquals('lg')" class="font-extrabold italic text-[3cqw] xl:text-[33px]" v-html="formatText(t('HomeEyeCatcher.text3'))"></h3>
+        <div class="text-center uppercase lg:text-left" :class="{'lg:text-center': isItemView}">
+          <h1 :class="{ 'lg:!text-[72px] lg:!leading-[1] 4xl:inline 4xl:after:inline hyphen-after': isItemView }" class="text-[48px] font-black italic leading-[1] lg:text-[8cqw] lg:leading-[8cqw] xl:text-[100px] xl:leading-[100px]">Polarcell</h1>
+          <h2 v-if="viewport.isLessThan('lg') && !isItemView" :class="{ 'inline': isItemView }" class="text-[18px] font-extrabold italic text-primary-500 " v-html="formatText(t('HomeEyeCatcher.text1'))"></h2>
+          <h2 v-else :class="{ '4xl:inline lg:!text-[72px] lg:!leading-[1] [&_br]:hidden': isItemView }" class="text-[18px] tracking-[1.2px] lg:tracking-[0] font-extrabold italic text-primary-500 lg:text-[8cqw] lg:leading-[8cqw] xl:text-[100px] xl:leading-[100px]" v-html="formatText(t('HomeEyeCatcher.text2'))"></h2>
+          <h3 v-if="viewport.isGreaterOrEquals('lg')" :class="{'lg:text-[34px] lg:pt-[10px]': isItemView}" class="font-extrabold italic text-[3cqw] xl:text-[33px]" v-html="formatText(t('HomeEyeCatcher.text3'))"></h3>
         </div>
-        <ul v-if="viewport.isLessThan('lg')" class="flex flex-wrap items-center justify-center gap-[10px] pt-[30px]">
+        <ul v-if="viewport.isLessThan('lg') && !isItemView" class="flex flex-wrap items-center justify-center gap-[10px] pt-[30px]">
           <li v-for="(menuNode, index) in categoryTree">
             <NuxtLink :to="localePath(generateCategoryLink(menuNode))" class="bg-primary-500 text-white text-[14px] font-bold flex items-center justify-center px-[10px] rounded-[15px] min-h-[30px]">
               {{ categoryTreeGetters.getName(menuNode).replace(' - ', '-') }}
             </NuxtLink>
           </li>
         </ul>
-        <div class="usps text-[12px] leading-[1.25] xl:leading-[1.5] lg:text-[1cqw] xl:text-[16px] 2xl:text-[18px] text-center pt-[50px] 2xl:pt-[180px]">
+        <div :class="{ '2xl:!pt-[90px]': isItemView }" class="usps text-[12px] leading-[1.25] xl:leading-[1.5] lg:text-[1cqw] xl:text-[16px] 2xl:text-[18px] text-center pt-[50px] 2xl:pt-[180px]">
           <ul class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-[repeat(6,auto)] 2xl:flex justify-between gap-[20px]">
             <li class="flex flex-col items-center gap-[15px] xl:gap-[20px] 2xl:gap-[30px]">
               <svg class="h-[42px] w-auto xl:h-[60px] 2xl:h-[80px]" xmlns="http://www.w3.org/2000/svg" width="42.001" height="42" viewBox="0 0 42.001 42"><g transform="translate(0 0)"><path d="M21.9,0h0a6.662,6.662,0,0,1,2.422.459,6.812,6.812,0,0,1,4.189,6.387v5.82a.668.668,0,0,0,.668.667h3.241a9.6,9.6,0,0,1,4.653,1.1,9.414,9.414,0,0,1,3.955,4.092,9.29,9.29,0,0,1,.876,5.465l-1.429,10A9.336,9.336,0,0,1,31.233,42H16.008a5.982,5.982,0,0,1-3.337-1.018A5.974,5.974,0,0,1,9.338,42H6a6.008,6.008,0,0,1-6-6V19.333a6.008,6.008,0,0,1,6-6h6.321l3.4-9.052A6.633,6.633,0,0,1,21.9,0Zm9.331,40A7.336,7.336,0,0,0,38.5,33.7l1.429-10a7.3,7.3,0,0,0-.688-4.293,7.424,7.424,0,0,0-3.121-3.224,7.636,7.636,0,0,0-3.695-.853H29.181a2.671,2.671,0,0,1-2.668-2.667V6.846A4.8,4.8,0,0,0,23.6,2.323,4.671,4.671,0,0,0,21.9,2a4.624,4.624,0,0,0-4.31,2.983L13.71,15.333H6a4.006,4.006,0,0,0-4,4V36a4.006,4.006,0,0,0,4,4H9.338A3.992,3.992,0,0,0,12,38.973l.667-.6.667.6A4,4,0,0,0,16.008,40Z" fill="#00a4cc"/><path d="M1,25.384H-1V0H1Z" transform="translate(12.517 14.333)" fill="#00a4cc"/></g></svg>
@@ -48,13 +48,25 @@
   </div>
 </template>
 
+<style scoped>
+@media (min-width: 1840px) {
+  .hyphen-after::after {
+    content: '\00a0-\00a0';
+  }
+}
+</style>
+
 <script lang="ts" setup>
 import { type CategoryTreeItem, categoryTreeGetters } from '@plentymarkets/shop-api';
-import { HomeEyeCatcherProps } from './types';
 
 const viewport = useViewport();
 
-const props = defineProps<HomeEyeCatcherProps>();
+const props = withDefaults(defineProps<{
+    categories: CategoryTreeItem[];
+    isItemView?: boolean
+}>(), {
+    isItemView: false
+});
 
 const categoryTree = ref(categoryTreeGetters.getTree(props.categories));
 const { buildCategoryMenuLink } = useLocalization();

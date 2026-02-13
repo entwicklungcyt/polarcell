@@ -13,7 +13,6 @@
         :tag="NuxtLink"
         rel="preload"
         :to="productPath"
-        :class="{ 'size-48': isFromSlider }"
         as="image"
         class="relative h-0 pb-[100%] block w-full"
       >
@@ -53,8 +52,8 @@
   
 <script setup lang="ts">
 import { productGetters, productImageGetters } from '@plentymarkets/shop-api';
-import { SfLink, SfIconShoppingCart, SfLoaderCircular, SfRating, SfCounter } from '@storefront-ui/vue';
-import type { ProductCardProps } from '~/components/ui/ProductCard/types';
+import { SfLink } from '@storefront-ui/vue';
+// import type { ProductCardProps } from '~/components/ui/ProductCard/types';
 import { defaults } from '~/composables';
 import type { ItemGridContent } from '~/components/blocks/ItemGrid/types';
 
@@ -103,7 +102,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 const product = computed(() => props.product);
 
-const configuration = computed(() => props.configuration || ({} as ItemGridContent));
+// const configuration = computed(() => props.configuration || ({} as ItemGridContent));
 
 const { addModernImageExtension } = useModernImage();
 const localePath = useLocalePath();
@@ -113,27 +112,27 @@ const { addToCart } = useCart();
 const { price, crossedPrice } = useProductPrice(product.value);
 const { send } = useNotification();
 const loading = ref(false);
-const config = useRuntimeConfig();
-const useTagsOnCategoryPage = config.public.useTagsOnCategoryPage;
+// const config = useRuntimeConfig();
+// const useTagsOnCategoryPage = config.public.useTagsOnCategoryPage;
 
 const name = computed(() => productGetters.getName(product.value) ?? '');
-const manufacturer = computed(() => productGetters.getManufacturer(product.value));
-const ratingCount = computed(() => productGetters.getTotalReviews(product.value));
-const rating = computed(() => productGetters.getAverageRating(product.value, 'half'));
-const shortDescription = computed(() => productGetters.getShortDescription(product.value) || '');
-const canAddFromCategory = computed(() => productGetters.canBeAddedToCartFromCategoryPage(product.value));
-const showFromText = computed(() => productGetters.showFromText(product.value));
+// const manufacturer = computed(() => productGetters.getManufacturer(product.value));
+// const ratingCount = computed(() => productGetters.getTotalReviews(product.value));
+// const rating = computed(() => productGetters.getAverageRating(product.value, 'half'));
+// const shortDescription = computed(() => productGetters.getShortDescription(product.value) || '');
+// const canAddFromCategory = computed(() => productGetters.canBeAddedToCartFromCategoryPage(product.value));
+// const showFromText = computed(() => productGetters.showFromText(product.value));
 
 const cover = computed(() => productGetters.getCoverImage(product.value));
-const secondCover = computed(() => productGetters.getSecondCoverImage(product.value));
+// const secondCover = computed(() => productGetters.getSecondCoverImage(product.value));
 const firstImage = computed(() => productImageGetters.getFirstImage(product.value));
 
 const imageUrl = computed(() => addModernImageExtension(cover.value));
-const effectiveHoverImageUrl = computed(() => {
-  if (!configuration.value?.showSecondImageOnHover) return '';
-  const src = addModernImageExtension(secondCover.value);
-  return src || '';
-});
+// const effectiveHoverImageUrl = computed(() => {
+//   if (!configuration.value?.showSecondImageOnHover) return '';
+//   const src = addModernImageExtension(secondCover.value);
+//   return src || '';
+// });
 
 const imageAlt = computed(() => productImageGetters.getImageAlternate(firstImage.value) || name.value || '');
 const imageTitle = computed(() => productImageGetters.getImageName(firstImage.value) || '');
@@ -141,10 +140,10 @@ const imageTitle = computed(() => productImageGetters.getImageName(firstImage.va
 const imageWidth = computed(() => productGetters.getImageWidth(product.value) || 600);
 const imageHeight = computed(() => productGetters.getImageHeight(product.value) || 600);
 
-const basePrice = computed(() => productGetters.getDefaultBasePrice(product.value));
-const unitContent = computed(() => productGetters.getUnitContent(product.value));
-const unitName = computed(() => productGetters.getUnitName(product.value));
-const showBasePrice = computed(() => productGetters.showPricePerUnit(product.value));
+// const basePrice = computed(() => productGetters.getDefaultBasePrice(product.value));
+// const unitContent = computed(() => productGetters.getUnitContent(product.value));
+// const unitName = computed(() => productGetters.getUnitName(product.value));
+// const showBasePrice = computed(() => productGetters.showPricePerUnit(product.value));
 
 const variationId = computed(() => productGetters.getVariationId(product.value));
 const { isGlobalProductCategoryTemplate } = useProducts();
@@ -158,9 +157,9 @@ const productPath = computed(() => {
 });
 
 const priority = computed(() => props.priority ?? ((props.index || 0) < 4));
-const lazy = computed(() => props.lazy);
-const isFromWishlist = ref(props.isFromWishlist || false);
-const isFromSlider = ref(props.isFromSlider || false);
+// const lazy = computed(() => props.lazy);
+// const isFromWishlist = ref(props.isFromWishlist || false);
+// const isFromSlider = ref(props.isFromSlider || false);
 
 const getWidth = () => {
   if (imageWidth.value && imageWidth.value > 0 && imageUrl.value.includes(defaults.IMAGE_LINK_SUFIX)) {
@@ -176,22 +175,22 @@ const getHeight = () => {
   return '';
 };
 
-const addWithLoader = async (productId: number, quickCheckout = true) => {
-  loading.value = true;
-  try {
-    await addToCart({ productId, quantity: 1 });
-    if (quickCheckout) {
-      openQuickCheckout(product.value, 1);
-    } else {
-      send({ message: t('addedToCart'), type: 'positive' });
-    }
-  } finally {
-    loading.value = false;
-  }
-};
-const differentPrices = (price: number, crossedPrice: number) => {
-  return crossedPrice ? Math.round(price * 100) / 100 !== Math.round(crossedPrice * 100) / 100 : false;
-};
+// const addWithLoader = async (productId: number, quickCheckout = true) => {
+//  loading.value = true;
+//  try {
+//    await addToCart({ productId, quantity: 1 });
+//    if (quickCheckout) {
+//      openQuickCheckout(product.value, 1);
+//    } else {
+//      send({ message: t('addedToCart'), type: 'positive' });
+//    }
+//  } finally {
+//    loading.value = false;
+//  }
+// };
+// const differentPrices = (price: number, crossedPrice: number) => {
+//   return crossedPrice ? Math.round(price * 100) / 100 !== Math.round(crossedPrice * 100) / 100 : false;
+// };
 
 const NuxtLink = resolveComponent('NuxtLink');
 

@@ -136,7 +136,7 @@
             </i18n-t>
           </span>
           <span><sup> **</sup>{{ t('Footer.copyRight.2', {currency: currency}) }}</span>
-          <a class="2xl:block" href="https://www.createyourtemplate.com" target="_blank" title="Lösungen für den eCommerce - Online Shops, eBay Shops und Templates, Widgets, Design, Programmierung, Fullservice, Branding - createyourtemplate GmbH & Co. KG - Berlin, Germany">
+          <a class="block" href="https://www.createyourtemplate.com" target="_blank" title="Lösungen für den eCommerce - Online Shops, eBay Shops und Templates, Widgets, Design, Programmierung, Fullservice, Branding - createyourtemplate GmbH & Co. KG - Berlin, Germany">
             powered by <span class="text-primary-500 font-extrabold">createyourtemplate</span>
           </a>
         </div>
