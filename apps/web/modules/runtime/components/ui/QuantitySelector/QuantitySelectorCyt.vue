@@ -18,7 +18,7 @@
           data-testid="quantity-selector-decrease-button"
           @click="dec()"
         >
-          <svg class="xl:h-[3px] w-auto" xmlns="http://www.w3.org/2000/svg" width="10" height="2" viewBox="0 0 10 2"><path d="M10,1H0V-1H10Z" transform="translate(0 1)"/></svg>
+          <svg class="xl:w-[13px] h-auto" xmlns="http://www.w3.org/2000/svg" width="10" height="2" viewBox="0 0 10 2"><path d="M10,1H0V-1H10Z" transform="translate(0 1)"/></svg>
         </UiButton>
       </SfTooltip>
       <UiButton

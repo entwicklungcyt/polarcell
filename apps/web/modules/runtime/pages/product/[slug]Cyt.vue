@@ -9,14 +9,14 @@
         <!-- Product Gallery and Purchase Card -->
         <div class="max-w-screen-3xl mx-auto">
           <div class="flex flex-col gap-[25px] xl:grid xl:grid-cols-[auto_550px] xl:gap-[80px] pt-[25px]">
-            <div class="left xl:min-w-[0] xl:self-start xl:sticky xl:top-[40px] bg-black/[0.03] xl:bg-white ml-[-20px] mr-[-20px] xl:ml-0 xl:mr-0">
+            <div class="left xl:min-w-[0] xl:self-start bg-black/[0.03] xl:bg-white ml-[-20px] mr-[-20px] xl:ml-0 xl:mr-0">
               <Gallery
                 :images="addModernImageExtensionForGallery(productGetters.getGallery(product))" 
                 :product="product"
               />
             </div>              
             <div class="right">
-              <div class="drift-zoom-image relative xl:sticky xl:top-[40px]">
+              <div class="drift-zoom-image relative">
                 <NuxtLazyHydrate when-idle>
                   <UiPurchaseCard v-if="product" :product="product" :review-average="countsProductReviews" />
                 </NuxtLazyHydrate>

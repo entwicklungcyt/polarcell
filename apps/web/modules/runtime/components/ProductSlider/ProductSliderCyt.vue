@@ -1,5 +1,5 @@
 <template>
-  <div v-if="items && items.length > 0">
+  <div v-if="items && items.length > 1">
     <div class="max-w-screen-3xl mx-auto">
       <h2 class="pb-[20px] xl:pb-[40px] text-[18px] xl:text-[24px] 2xl:text-[30px] font-extrabold italic text-center">
         <span>

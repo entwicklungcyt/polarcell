@@ -27,7 +27,7 @@
             <h2 class="font-semibold">{{ t('Produktseite.Kompatibilitäts-Checker.title') }}</h2>
             <button @click.stop.prevent="isOpen = false">✕</button>
           </div>
-          <div class="p-4 space-y-4 overflow-y-auto h-[calc(100%-57px)] technical-data" v-html="technicalData" />
+          <div class="p-4 space-y-4 overflow-y-auto h-[calc(100%-57px)] technical-data [&_ul>br]:hidden" v-html="technicalData" />
         </div>
       </Transition>
     </Teleport>

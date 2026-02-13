@@ -93,6 +93,11 @@ export default defineNuxtModule({
         path: 'GlobalAccessory/GlobalAccessory.vue',
         global: false,
       },
+      {
+        name: 'TabsCyt',
+        path: 'Tabs/TabsCyt.vue',
+        global: false,
+      },
     ];
 
     for (const { name, path, global } of components) {
