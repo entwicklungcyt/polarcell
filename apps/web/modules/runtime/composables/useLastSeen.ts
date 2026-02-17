@@ -4,7 +4,7 @@ interface LastSeenItem {
 }
 
 const STORAGE_KEY = 'lastSeen';
-const MAX_ITEMS = 10;
+const MAX_ITEMS = 11;
 
 export const useLastSeen = () => {
   const items = useState<LastSeenItem[]>('last-seen', () => []);

@@ -26,6 +26,9 @@
 
     <!-- Seo -->
     <Seo />
+
+    <!-- Last Seen -->
+    <LastSeenCyt />
   </div>
 </template>
 

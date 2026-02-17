@@ -383,6 +383,8 @@ interface ProductProperty {
 }
 
 const additionalInfoHtml = computed(() => {
+  if (!additionalInfoGroup.value) return '';
+
   const items = (additionalInfoGroup.value as ProductProperty[])
     .filter((prop) => allowedIdsForAdditionalInfo.includes(prop.id))
     .map((prop) => `<li class="text-right flex items-center gap-[10px] odd:bg-[#F7F7F7] p-[10px] before:content-[''] before:w-[25px] before:h-[25px] before:bg-[#d83300] before:rounded-full before:flex before:items-center before:justify-center property-${prop.id} order-[${prop.position}]"><strong class="mr-auto text-left">${prop.names.name}:</strong> ${prop.values.value}</li>`);

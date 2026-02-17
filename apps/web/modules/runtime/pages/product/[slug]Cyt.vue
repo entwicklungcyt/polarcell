@@ -40,12 +40,13 @@
           </div>
         </div>
         <!-- Zusatzinformationen (Technische Daten - etwas verwirrend, da die echten "Technische Daten" im Kompatibilitäten DIV sind) -->
-        <div>
+        <div v-if="additionalInfoHtml">
           <div class="sticky top-[20px] [.slim-header-active_&]:top-[80px]">
             <p class="text-[18px] font-extrabold italic mb-[15px]">{{ t('common.labels.technicalData') }}:</p>
             <div v-html="additionalInfoHtml"></div>
           </div>
         </div>
+        <div v-else></div>
         <!-- Produktbeschreibung -->
         <div
           v-if="productGetters.getDescription(product)"
@@ -291,6 +292,8 @@ interface ProductProperty {
 }
 
 const additionalInfoHtml = computed(() => {
+  if (!additionalInfoGroup.value) return '';
+
   const items = (additionalInfoGroup.value as ProductProperty[])
     .filter((prop) => allowedIdsForAdditionalInfo.includes(prop.id))
     .map((prop) => `<li class="text-right flex items-center gap-[10px] odd:bg-[#F7F7F7] p-[10px] before:content-[''] before:w-[25px] before:h-[25px] before:bg-[#d83300] before:rounded-full before:flex before:items-center before:justify-center property-${prop.id} order-[${prop.position}]"><strong class="mr-auto">${prop.names.name}:</strong> ${prop.values.value}</li>`);

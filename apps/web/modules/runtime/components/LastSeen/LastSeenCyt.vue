@@ -61,54 +61,55 @@ interface ProductDisplay {
 }
 
 const products = ref<ProductDisplay[]>([]);
-const MAX_SLOTS = 10;
+const MAX_SEEN = 10;
 
-onNuxtReady(async () => {
-  const items = getItems(props.excludeVariationId);
+onNuxtReady(() => {
+  setTimeout(async () => {
+    const items = getItems(props.excludeVariationId);
 
-  if (!items.length) {
-    loaded.value = true;
-    return;
-  }
-
-  const sdk = useSdk();
-  const results: ProductDisplay[] = [];
-
-  for (let i = 0; i < items.length && i < MAX_SLOTS; i++) {
-    const item = items[i];
-    if (!item) continue;
-
-    try {
-      const { data } = await sdk.plentysystems.getProduct({
-        id: item.itemId,
-        variationId: item.variationId,
-      });
-
-      if (data?.texts) {
-        const variation = data?.images?.variation ?? [];
-        const all = data?.images?.all ?? [];
-        const img = variation[0] || all[0];
-        const name = productGetters.getName(data) || '';
-
-        const varId = productGetters.getVariationId(data);
-        const basePath = `/${productGetters.getUrlPath(data)}_${productGetters.getItemId(data)}`;
-        const shouldAppendVariation = varId && productGetters.getSalableVariationCount(data) === 1;
-        const productUrl = localePath(shouldAppendVariation ? `${basePath}_${varId}` : basePath);
-
-        results.push({
-          variationId: item.variationId,
-          name,
-          price: productGetters.getPrice(data) || 0,
-          image: img?.urlMiddle || img?.url || '',
-          url: productUrl,
-        });
-      }
-    } catch (e) {
-      console.warn(`[LastSeen] Failed to load variation ${item.variationId}`, e);
+    if (!items.length) {
+      loaded.value = true;
+      return;
     }
-  }
 
-  products.value = results;
-  loaded.value = true;
+    const sdk = useSdk();
+
+    const results = await Promise.all(
+      items.slice(0, MAX_SEEN).map(async (item) => {
+        try {
+          const { data } = await sdk.plentysystems.getProduct({
+            id: item.itemId,
+            variationId: item.variationId,
+          });
+
+          if (data?.texts) {
+            const variation = data?.images?.variation ?? [];
+            const all = data?.images?.all ?? [];
+            const img = variation[0] || all[0];
+            const name = productGetters.getName(data) || '';
+
+            const varId = productGetters.getVariationId(data);
+            const basePath = `/${productGetters.getUrlPath(data)}_${productGetters.getItemId(data)}`;
+            const shouldAppendVariation = varId && productGetters.getSalableVariationCount(data) === 1;
+            const productUrl = localePath(shouldAppendVariation ? `${basePath}_${varId}` : basePath);
+
+            return {
+              variationId: item.variationId,
+              name,
+              price: productGetters.getPrice(data) || 0,
+              image: img?.urlMiddle || img?.url || '',
+              url: productUrl,
+            } as ProductDisplay;
+          }
+        } catch (e) {
+          console.warn(`[LastSeen] Failed to load variation ${item.variationId}`, e);
+        }
+        return null;
+      })
+    );
+
+    products.value = results.filter((p): p is ProductDisplay => p !== null);
+    loaded.value = true;
+  }, 500);
 });
 </script>
