@@ -175,6 +175,21 @@ export default defineNuxtModule({
       if (Price) {
         Price.filePath = resolve('./runtime/components/Price/PriceCyt.vue');
       }
+      // ReviewsAccordion
+      const ReviewsAccordion = components.find((c) => c.pascalName === 'ReviewsAccordion');
+      if (ReviewsAccordion) {
+        ReviewsAccordion.filePath = resolve('./runtime/components/ReviewsAccordion/ReviewsAccordionCyt.vue');
+      }
+      // ReviewStatistics
+      const ReviewStatistics = components.find((c) => c.pascalName === 'UiReviewStatistics');
+      if (ReviewStatistics) {
+        ReviewStatistics.filePath = resolve('./runtime/components/ui/ReviewStatistics/ReviewStatisticsCyt.vue');
+      }
+      // Review
+      const Review = components.find((c) => c.pascalName === 'UiReview');
+      if (Review) {
+        Review.filePath = resolve('./runtime/components/ui/Review/ReviewCyt.vue');
+      }
       // ProductSlider
       const ProductSlider = components.find((c) => c.pascalName === 'ProductSlider');
       if (ProductSlider) {

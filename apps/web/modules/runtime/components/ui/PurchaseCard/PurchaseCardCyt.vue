@@ -120,45 +120,13 @@
     <GlobalAccessory :item-id="5088" :variation-id="6086" />
 
     <!-- Tabs mobile -->
-    <div v-if="viewport.isLessThan('lg')" class="pt-[30px]">
+    <div class="pt-[30px] xl:hidden">
       <!-- Kompatibilitäten Tab -->
       <TabsCyt v-if="productGetters.getTechnicalData(product)" :data-content="productGetters.getTechnicalData(product)" data-id="tab-technical-data" :data-name="t('Produktseite.Kompatibilitäten')" />
       <!-- Zusatzinformationen Tab (Technische Daten - etwas verwirrend, da die echten "Technische Daten" im Kompatibilitäten Tab sind) -->
       <TabsCyt :data-content="additionalInfoHtml" data-id="tab-additional-info" :data-name="t('common.labels.technicalData')" />
-
-      <component is="style" v-if="additionalInfoHtml">
-        <!-- Gewicht -->
-        .tab-content li.property-17 {
-          &:before {
-            background-image: url("data:image/svg+xml;charset=UTF-8, %3csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25'%3e%3ccircle cx='12.5' cy='12.5' r='12.5' fill='%23d83300'/%3e%3cline x1='12.5' y1='6' x2='12.5' y2='18' stroke='%23fff' stroke-width='1.4' stroke-linecap='round'/%3e%3crect x='9.5' y='17.5' width='6' height='1.5' rx='0.75' fill='%23fff'/%3e%3cline x1='6.5' y1='9' x2='18.5' y2='9' stroke='%23fff' stroke-width='1.4' stroke-linecap='round'/%3e%3cpath d='M5 14.5l1.5-5.5 1.5 5.5a1.5 1.5 0 0 1-3 0z' fill='%23fff'/%3e%3cpath d='M16.5 14.5l1.5-5.5 1.5 5.5a1.5 1.5 0 0 1-3 0z' fill='%23fff'/%3e%3c/svg%3e");
-          }
-        }
-        <!-- Akku -->
-        .tab-content li.property-14 {
-          &:before {
-            background-image: url("data:image/svg+xml;charset=UTF-8, %3csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25'%3e%3ccircle cx='12.5' cy='12.5' r='12.5' fill='%23d83300'/%3e%3crect x='6' y='9' width='11' height='7' rx='1' fill='none' stroke='%23fff' stroke-width='1.5'/%3e%3crect x='17' y='11' width='2' height='3' rx='0.5' fill='%23fff'/%3e%3crect x='8' y='11' width='4' height='3' rx='0.5' fill='%23fff'/%3e%3c/svg%3e");
-          }
-        }
-        <!-- Spannung -->
-        .tab-content li.property-16 {
-          &:before {
-            background-image: url("data:image/svg+xml;charset=UTF-8, %3csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25'%3e%3ccircle cx='12.5' cy='12.5' r='12.5' fill='%23d83300'/%3e%3cpath d='M14 5L9 13h3.5l-1 7 5.5-8.5H13L14 5z' fill='%23fff'/%3e%3c/svg%3e");
-          }
-        }
-        <!-- Technologie -->
-        .tab-content li.property-13 {
-          &:before {
-            background-image: url("data:image/svg+xml;charset=UTF-8, %3csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25'%3e%3ccircle cx='12.5' cy='12.5' r='12.5' fill='%23d83300'/%3e%3ccircle cx='12.5' cy='12.5' r='1.5' fill='%23fff'/%3e%3cellipse cx='12.5' cy='12.5' rx='7' ry='3' fill='none' stroke='%23fff' stroke-width='1'/%3e%3cellipse cx='12.5' cy='12.5' rx='7' ry='3' fill='none' stroke='%23fff' stroke-width='1' transform='rotate(60 12.5 12.5)'/%3e%3cellipse cx='12.5' cy='12.5' rx='7' ry='3' fill='none' stroke='%23fff' stroke-width='1' transform='rotate(-60 12.5 12.5)'/%3e%3c/svg%3e");
-          }
-        }
-        <!-- Maße -->
-        .tab-content li.property-18 {
-          &:before {
-            background-image: url("data:image/svg+xml;charset=UTF-8, %3csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25'%3e%3ccircle cx='12.5' cy='12.5' r='12.5' fill='%23d83300'/%3e%3crect x='5' y='9' width='15' height='7' rx='1' fill='none' stroke='%23fff' stroke-width='1.3'/%3e%3cline x1='8' y1='9' x2='8' y2='12' stroke='%23fff' stroke-width='1'/%3e%3cline x1='10.5' y1='9' x2='10.5' y2='11' stroke='%23fff' stroke-width='0.8'/%3e%3cline x1='13' y1='9' x2='13' y2='12' stroke='%23fff' stroke-width='1'/%3e%3cline x1='15.5' y1='9' x2='15.5' y2='11' stroke='%23fff' stroke-width='0.8'/%3e%3cline x1='18' y1='9' x2='18' y2='12' stroke='%23fff' stroke-width='1'/%3e%3c/svg%3e");
-          }
-        }
-      </component>
-
+      <!-- Manufacturer Tab -->
+      <TabsCyt v-if="manufacturerHtml" :data-content="manufacturerHtml" data-id="tab-manufacturer" :data-name="t('manufacturer.header')" />
       <!-- item description -->
       <div
         v-if="productGetters.getDescription(product)"
@@ -178,7 +146,7 @@
           [&_li]:before:text-[12px] [&_li]:before:font-bold
         "
       >
-        <div v-html="productGetters.getDescription(product)"></div>
+        <div v-html="productGetters.getDescription(product)" class="max-w-[900px] mx-auto"></div>
       </div>
     </div>
   </div>
@@ -192,6 +160,7 @@ import type { PayPalAddToCartCallback } from '~/components/PayPal/types';
 import { paths } from '~/utils/paths';
 
 const { open, openDrawer } = useProductLegalDetailsDrawer();
+const customViewport = useCustomViewport()
 
 const props = withDefaults(defineProps<PurchaseCardProps>(), {
   configuration: () => ({
@@ -416,9 +385,50 @@ interface ProductProperty {
 const additionalInfoHtml = computed(() => {
   const items = (additionalInfoGroup.value as ProductProperty[])
     .filter((prop) => allowedIdsForAdditionalInfo.includes(prop.id))
-    .map((prop) => `<li class="flex items-center gap-[10px] odd:bg-[#F7F7F7] p-[10px] before:content-[''] before:w-[25px] before:h-[25px] before:bg-[#d83300] before:rounded-full before:flex before:items-center before:justify-center property-${prop.id} order-[${prop.position}]"><strong>${prop.names.name}:</strong> ${prop.values.value}</li>`)
-    .join('');
-  return `<ul class="flex flex-col">${items}</ul>`;
+    .map((prop) => `<li class="text-right flex items-center gap-[10px] odd:bg-[#F7F7F7] p-[10px] before:content-[''] before:w-[25px] before:h-[25px] before:bg-[#d83300] before:rounded-full before:flex before:items-center before:justify-center property-${prop.id} order-[${prop.position}]"><strong class="mr-auto text-left">${prop.names.name}:</strong> ${prop.values.value}</li>`);
+
+  // Add dimensions from variation data
+  const { widthMM, lengthMM, heightMM } = props?.product?.variation ?? {};
+  if (widthMM || lengthMM || heightMM) {
+    items.push(`<li class="flex items-center gap-[10px] odd:bg-[#F7F7F7] p-[10px] before:content-[''] before:w-[25px] before:h-[25px] before:bg-[#d83300] before:rounded-full before:flex before:items-center before:justify-center property-18 order-[0]"><strong class="mr-auto text-left">${t('Produktseite.Maße')}:</strong> L:${lengthMM} × B:${widthMM} × H:${heightMM} mm</li>`);
+  }
+
+  return `<ul class="flex flex-col">${items.join('')}</ul>`;
+});
+
+// Helper for manufacturer
+interface Manufacturer {
+  name?: string;
+  legalName?: string;
+  street?: string;
+  houseNo?: string;
+  postcode?: string;
+  town?: string;
+  phoneNumber?: string;
+  faxNumber?: string;
+  email?: string;
+}
+const manufacturerHtml = computed(() => {
+  const mfr = props?.product?.item?.manufacturer as Manufacturer | undefined;
+  if (!mfr) return '';
+  const keys: { key: keyof Manufacturer; order: number }[] = [
+    { key: 'name', order: 0 },
+    { key: 'legalName', order: 1 },
+    { key: 'phoneNumber', order: 3 },
+    { key: 'faxNumber', order: 4 },
+    { key: 'email', order: 5 },
+  ];
+  const items = keys
+    .filter(({ key }) => mfr[key] && String(mfr[key]).trim() !== '')
+    .map(({ key, order }) => `<li style="order:${order}">${mfr[key]}</li>`);
+  // Combined address line
+  const streetPart = [mfr.street, mfr.houseNo].filter(Boolean).join(' ');
+  const cityPart = [mfr.postcode, mfr.town].filter(Boolean).join(' ');
+  const address = [streetPart, cityPart].filter(Boolean).join(', ');
+  if (address) {
+    items.push(`<li style="order:2">${address}<br>Deutschland</li>`);
+  }
+  return items.length ? `<ul class="manu flex flex-col gap-[5px]">${items.join('')}</ul>` : '';
 });
 
 // Helper to get a property value by id

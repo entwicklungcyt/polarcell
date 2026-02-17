@@ -1,5 +1,5 @@
 <template>
-  <div class="group/tabs border-y border-[#E5E7EB] mt-[-1px]">
+  <div class="group/tabs border-y border-[#E5E7EB] mt-[-1px] max-w-[900px] mx-auto">
     <input class="hidden peer" type="checkbox" :name="dataId" :id="'tab-' + dataId">
     <label class="w-full flex cursor-pointer flex-row items-center gap-[10px] font-extrabold italic py-[15px]" :for="'tab-' + dataId">
       {{ dataName }}

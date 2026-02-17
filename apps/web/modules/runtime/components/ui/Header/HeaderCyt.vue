@@ -59,6 +59,10 @@
 
 .bg-panther {
   background-image: url('https://cdn02.plentymarkets.com/91tuepbzlonh/frontend/pwa/blackpanther_sm.avif');
+
+  .slim-header-active & {
+    background-image: none;
+  }
 }
 </style>
 

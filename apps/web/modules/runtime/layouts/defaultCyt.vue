@@ -3,7 +3,9 @@
     <UiHeader />
     <main class="max-w-screen-3xl mx-auto">
       <!-- breadcrumbs -->
-       <BreadcrumbsCyt :breadcrumbs="breadcrumbs || []" />
+      <div class="max-w-[940px] xl:max-w-full mx-auto">
+        <BreadcrumbsCyt :breadcrumbs="breadcrumbs || []" />
+      </div>
       <!-- content -->
       <slot />
     </main>
