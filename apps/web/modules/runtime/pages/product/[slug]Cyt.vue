@@ -35,7 +35,7 @@
             <div v-if="manufacturerHtml" class="pt-[40px]">
               <p class="font-extrabold italic text-[18px] mb-[15px]">{{ t('manufacturer.header') }}:</p>
               <div v-html="manufacturerHtml" class="leading-[1.25] text-[18px]"></div>
-              <a href="/batterieentsorgung" class="underline pt-[20px] text-[18px] flex items-center gap-[10px]">{{ t('Footer.Link Titel.3') }}</a>
+              <a href="/batterieentsorgung" target="_blank" class="underline pt-[20px] text-[18px] flex items-center gap-[10px]">{{ t('Footer.Link Titel.3') }}</a>
             </div>
           </div>
         </div>
@@ -87,6 +87,8 @@
 
       <!-- Last Seen Section -->
       <LastSeenCyt :exclude-variation-id="product?.variation?.id" />
+
+      <TrustedShops />
     </NarrowContainer>
 
     <UiReviewModal />

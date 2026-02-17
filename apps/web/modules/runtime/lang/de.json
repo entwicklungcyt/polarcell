@@ -57,17 +57,17 @@
         "01": {
             "name": "Handy-Akkus",
             "url": "/handy-akkus",
-            "img": "https://placehold.co/1000x650/e8cb48/e8cb48"
+            "img": "https://cdn02.plentymarkets.com/91tuepbzlonh/frontend/pwa/handy-akkus.avif"
         },
         "02": {
             "name": "Standard-Akkus",
             "url": "/standard-akkus",
-            "img": "https://placehold.co/1000x650/00A4CC/00A4CC"
+            "img": "https://cdn02.plentymarkets.com/91tuepbzlonh/frontend/pwa/standard-akkus.avif"
         },
         "03": {
             "name": "Zubehör",
             "url": "/handy-akkus/zubehoer",
-            "img": "https://placehold.co/1000x650/fb8e33/fb8e33"
+            "img": "https://cdn02.plentymarkets.com/91tuepbzlonh/frontend/pwa/acc.avif"
         }
     },
     "TrustedShops": {
