@@ -20,7 +20,7 @@
       </div>
       <section
         v-if="products?.length"
-        :class="['grid grid-cols-1 2xs:grid-cols-2 gap-[10px] sm:gap-[20px] sm:gap-y-[40px] md:grid-cols-2 lg:grid-cols-3', isSearch ? 'xl:grid-cols-4' : '']"
+        :class="['grid grid-cols-1 2xs:grid-cols-2 gap-[10px] sm:gap-[20px] sm:gap-y-[40px] md:grid-cols-2 lg:grid-cols-3 self-start', isSearch ? 'xl:grid-cols-4' : '']"
         data-testid="category-grid"
       >
         <NuxtLazyHydrate
