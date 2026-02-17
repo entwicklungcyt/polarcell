@@ -62,6 +62,7 @@
 
   .slim-header-active & {
     background-image: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
   }
 }
 </style>

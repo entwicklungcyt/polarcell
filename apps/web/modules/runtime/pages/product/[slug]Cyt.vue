@@ -83,6 +83,9 @@
       
       <!-- Recommended Products Section -->
       <RecommendedProducts :categoryId="String(product?.defaultCategories?.[0]?.id)" :headline="'Unsere Topseller in ' + breadcrumbs[breadcrumbs.length - 2]?.name" class="pt-[45px] xl:pt-[60px] 4xl:pt-[80px]" />
+
+      <!-- Last Seen Section -->
+      <LastSeenCyt :exclude-variation-id="product?.variation?.id" />
     </NarrowContainer>
 
     <UiReviewModal />
@@ -132,6 +135,7 @@
 <script setup lang="ts">
 import type { Product } from '@plentymarkets/shop-api';
 import { productGetters, reviewGetters, categoryTreeGetters } from '@plentymarkets/shop-api';
+import { useLastSeen } from '../../composables/useLastSeen';
 
 const route = useRoute();
 const { setCurrentProduct } = useProducts();
@@ -333,6 +337,14 @@ const manufacturerHtml = computed(() => {
     items.push(`<li style="order:2">${address}<br>Deutschland</li>`);
   }
   return items.length ? `<ul class="manu flex flex-col gap-[5px]">${items.join('')}</ul>` : '';
+});
+
+// last seen
+const { add } = useLastSeen();
+
+// After product data is loaded
+onMounted(() => {
+  add(product.value?.item?.id || 0, product.value?.variation?.id || 0);
 });
 </script>
   

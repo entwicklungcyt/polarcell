@@ -98,6 +98,11 @@ export default defineNuxtModule({
         path: 'Tabs/TabsCyt.vue',
         global: false,
       },
+      {
+        name: 'LastSeenCyt',
+        path: 'LastSeen/LastSeenCyt.vue',
+        global: false,
+      },
     ];
 
     for (const { name, path, global } of components) {
