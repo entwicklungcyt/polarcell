@@ -124,7 +124,7 @@
       <!-- Kompatibilitäten Tab -->
       <TabsCyt v-if="productGetters.getTechnicalData(product)" :data-content="productGetters.getTechnicalData(product)" data-id="tab-technical-data" :data-name="t('Produktseite.Kompatibilitäten')" />
       <!-- Zusatzinformationen Tab (Technische Daten - etwas verwirrend, da die echten "Technische Daten" im Kompatibilitäten Tab sind) -->
-      <TabsCyt :data-content="additionalInfoHtml" data-id="tab-additional-info" :data-name="t('common.labels.technicalData')" />
+      <TabsCyt v-if="additionalInfoHtml" :data-content="additionalInfoHtml" data-id="tab-additional-info" :data-name="t('common.labels.technicalData')" />
       <!-- Manufacturer Tab -->
       <TabsCyt v-if="manufacturerHtml" :data-content="manufacturerHtml" data-id="tab-manufacturer" :data-name="t('manufacturer.header')" />
       <!-- item description -->
@@ -414,10 +414,9 @@ const manufacturerHtml = computed(() => {
   const mfr = props?.product?.item?.manufacturer as Manufacturer | undefined;
   if (!mfr) return '';
   const keys: { key: keyof Manufacturer; order: number }[] = [
-    { key: 'name', order: 0 },
-    { key: 'legalName', order: 1 },
+    { key: 'legalName', order: 0 },
     { key: 'phoneNumber', order: 3 },
-    { key: 'faxNumber', order: 4 },
+    // { key: 'faxNumber', order: 4 },
     { key: 'email', order: 5 },
   ];
   const items = keys
@@ -428,7 +427,7 @@ const manufacturerHtml = computed(() => {
   const cityPart = [mfr.postcode, mfr.town].filter(Boolean).join(' ');
   const address = [streetPart, cityPart].filter(Boolean).join(', ');
   if (address) {
-    items.push(`<li style="order:2">${address}<br>Deutschland</li>`);
+    items.push(`<li style="order:2" class="pb-[20px]">${address}<br>Deutschland</li>`);
   }
   return items.length ? `<ul class="manu flex flex-col gap-[5px]">${items.join('')}</ul>` : '';
 });

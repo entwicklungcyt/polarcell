@@ -130,12 +130,6 @@
       background-image: url("data:image/svg+xml;charset=UTF-8, %3csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25'%3e%3ccircle cx='12.5' cy='12.5' r='12.5' fill='%23d83300'/%3e%3crect x='5' y='9' width='15' height='7' rx='1' fill='none' stroke='%23fff' stroke-width='1.3'/%3e%3cline x1='8' y1='9' x2='8' y2='12' stroke='%23fff' stroke-width='1'/%3e%3cline x1='10.5' y1='9' x2='10.5' y2='11' stroke='%23fff' stroke-width='0.8'/%3e%3cline x1='13' y1='9' x2='13' y2='12' stroke='%23fff' stroke-width='1'/%3e%3cline x1='15.5' y1='9' x2='15.5' y2='11' stroke='%23fff' stroke-width='0.8'/%3e%3cline x1='18' y1='9' x2='18' y2='12' stroke='%23fff' stroke-width='1'/%3e%3c/svg%3e");
     }
   }
-
-  .manu {
-    li[style*="order:3"] {
-      padding-top: 20px;
-    }
-  }
 </style>
   
 <script setup lang="ts">
@@ -328,10 +322,9 @@ const manufacturerHtml = computed(() => {
   const mfr = product.value?.item?.manufacturer as Manufacturer | undefined;
   if (!mfr) return '';
   const keys: { key: keyof Manufacturer; order: number }[] = [
-    { key: 'name', order: 0 },
-    { key: 'legalName', order: 1 },
+    { key: 'legalName', order: 0 },
     { key: 'phoneNumber', order: 3 },
-    { key: 'faxNumber', order: 4 },
+    // { key: 'faxNumber', order: 4 },
     { key: 'email', order: 5 },
   ];
   const items = keys
@@ -342,7 +335,7 @@ const manufacturerHtml = computed(() => {
   const cityPart = [mfr.postcode, mfr.town].filter(Boolean).join(' ');
   const address = [streetPart, cityPart].filter(Boolean).join(', ');
   if (address) {
-    items.push(`<li style="order:2">${address}<br>Deutschland</li>`);
+    items.push(`<li style="order:2" class="pb-[20px]">${address}<br>Deutschland</li>`);
   }
   return items.length ? `<ul class="manu flex flex-col gap-[5px]">${items.join('')}</ul>` : '';
 });

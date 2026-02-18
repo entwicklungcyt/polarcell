@@ -3,7 +3,7 @@
         <NuxtLink 
         v-for="category in HomeCategories" 
         :to="category.url" 
-        class="text-white uppercase font-extrabold relative group"
+        class="uppercase font-extrabold relative group"
         >
         <span class="block w-full aspect-[1000/650]">
             <img :src="category.img" loading="lazy" :alt="category.name" class="absolute inset-0 w-full h-full object-cover">
@@ -15,12 +15,13 @@
             sm:text-[18px] lg:text-[14px] 2xl:text-[18px]
         ">
             <span class="
-                border border-white border-[2px] 2xl:border-[3px]
+                border border-black border-[2px] 2xl:border-[3px]
+                bg-white
                 min-h-[40px] sm:min-h-[60px] lg:min-h-[40px] 2xl:min-h-[60px]
                 rounded-[20px] sm:rounded-[30px] lg:rounded-[20px] 2xl:rounded-[30px]
                 px-[20px] sm:px-[30px] lg:px-[20px] 2xl:px-[30px]
                 flex justify-center items-center
-                group-hover:bg-white group-hover:text-black transition-colors
+                group-hover:bg-black group-hover:text-white transition-colors
             ">
             {{ category.name }}
             </span>

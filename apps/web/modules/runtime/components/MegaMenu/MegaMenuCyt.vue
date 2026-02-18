@@ -118,11 +118,11 @@
             </span>
           </NuxtLink>
 
-          <!-- Dropdown: xl+ only, pure CSS hover, no JS -->
+          <!-- Dropdown -->
           <ul
             v-if="menuNode.children && menuNode.children.length > 0"
-            class="hidden xl:group-hover:block absolute top-full left-0 right-0 bg-black text-white z-50 shadow-lg
-                  [&_a]:block [&_a]:px-5 [&_a]:py-2 [&_a]:text-[14px] [&_a]:normal-case [&_a]:tracking-normal [&_a]:whitespace-nowrap [&_a]:transition-colors [&_a]:duration-150
+            class="hidden xl:group-hover:block absolute top-full left-0 right-0 bg-black/85 text-white z-50 shadow-lg border border-dotted border-white mt-[-1px] rounded-bl-[5px] rounded-br-[5px]
+                  [&_a]:block [&_a]:rounded-[5px] [&_a]:m-[1px] [&_a]:px-5 [&_a]:py-2 [&_a]:text-[14px] [&_a]:normal-case [&_a]:tracking-normal [&_a]:whitespace-nowrap [&_a]:transition-colors [&_a]:duration-150
                   [&_a:hover]:bg-white [&_a:hover]:text-black"
           >
             <li v-for="child in menuNode.children" :key="child.id">

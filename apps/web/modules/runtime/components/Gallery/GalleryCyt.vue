@@ -208,6 +208,7 @@ const slideTo = (index: number) => {
   activeIndex.value = index;
   if (mainSwiper.value?.params.loop) mainSwiper.value.slideToLoop(index);
   else mainSwiper.value?.slideTo(index);
+  thumbsSwiperRef.value?.slideTo(index - 1);
 };
 
 const atStart = computed(() => activeIndex.value === 0);
