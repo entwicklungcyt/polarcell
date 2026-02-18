@@ -37,16 +37,37 @@
 </style>
 
 <script setup lang="ts">
-defineProps<{
+const props = defineProps<{
   breadcrumbs: Array<{
     name: string;
     link: string;
   }>;
 }>();
 
+const baseUrl = useRequestURL().origin;
+
 // Helper function to clean category names
 const cleanCategoryName = (name: string) => {
   return name.replace(' - ', '-');
 };
+
+// Rich Snippets
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: props.breadcrumbs.map((item, index) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          name: cleanCategoryName(item.name),
+          item: item.link !== '#' ? `${baseUrl}${item.link}` : undefined,
+        })),
+      }),
+    },
+  ],
+});
 </script>
 
