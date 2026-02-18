@@ -22,6 +22,9 @@
         <div class="text-[14px] xl:text-[16px] font-extrabold">
           {{ n(productGetters.getPrice(product) || 0, 'currency') }}
         </div>
+        <div :class="['text-[12px] xl:text-[12px] av' + productGetters.getAvailabilityId(product), productGetters.getAvailabilityId(product) == 1 ? 'text-[#46BB00]' : 'text-[black]']">
+          {{ productGetters.getAvailabilityName(product) }}
+        </div>
         <UiButton
           size="sm"
           class="bg-primary-500 !rounded-[15px] h-[30px] flex items-center uppercase !font-bold !text-[12px] hover:!bg-black !shadow-none mt-auto !self-start"

@@ -18,7 +18,7 @@
           <div class="right">
             <div class="drift-zoom-image relative">
               <NuxtLazyHydrate when-idle>
-                <UiPurchaseCard v-if="product" :product="product" :review-average="countsProductReviews" />
+                <UiPurchaseCard v-if="product" :product="product" :review-average="countsProductReviews" :hide-compatibility-checker="true ? breadcrumbs[2]?.name === 'Zubehör' : false" />
               </NuxtLazyHydrate>
             </div>
           </div>

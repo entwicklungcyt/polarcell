@@ -43,7 +43,8 @@
       <div class="text-[10px] xl:text-[12px] flex flex-wrap gap-x-[5px] pt-[5px] xl:pt-[10px] 2xl:pt-[15px]">
         <span :class="{ 'text-[#46BB00]' : product?.variation?.availability?.id == 1 }">{{ product?.variation?.availability?.names?.name }}</span>
         <span class="text-[#999]">
-          {{ showNetPrices ? t('product.priceExclVAT') : t('product.priceInclVAT') }} {{ t('orderProperties.vat.plus') }} <NuxtLink class="underline text-black" @click.stop href="/shipping">{{ t('account.ordersAndReturns.orderDetails.delivery') }}</NuxtLink>
+          {{ showNetPrices ? t('product.priceExclVAT') : t('product.priceInclVAT') }} {{ t('orderProperties.vat.plus') }}
+          <NuxtLink class="underline text-black" @click.stop href="/versandinformationen" target="_blank">{{ t('account.ordersAndReturns.orderDetails.delivery') }}</NuxtLink><sup>*</sup>
         </span>
       </div>
     </div>

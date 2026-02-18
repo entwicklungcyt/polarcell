@@ -53,7 +53,7 @@
         </div>
       </div>
 
-      <CompatibilityChecker v-if="productGetters.getTechnicalData(product)" :technical-data="productGetters.getTechnicalData(product)" />
+      <CompatibilityChecker v-if="productGetters.getTechnicalData(product) && !hideCompatibilityChecker" :technical-data="productGetters.getTechnicalData(product)" />
 
       <ProductAttributes :product="product" />
       <BundleOrderItems v-if="product.bundleComponents" :product="product" />
@@ -211,7 +211,7 @@ const props = withDefaults(defineProps<PurchaseCardProps>(), {
       paddingLeft: 0,
       fullWidth: false,
     },
-  }),
+  })
 });
 
 const { currentProduct } = useProducts();
@@ -457,5 +457,8 @@ const eanBarcode = computed(() =>
 
 // Check if EAN barcode exists
 const ean_code_exists = computed(() => !!eanBarcode.value)
+
+// hide compatibility checker
+const attrs = useAttrs()
+const hideCompatibilityChecker = computed(() => !!attrs['hide-compatibility-checker'])
 </script>
-  
