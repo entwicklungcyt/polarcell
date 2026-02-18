@@ -61,7 +61,7 @@ interface ProductDisplay {
 }
 
 const products = ref<ProductDisplay[]>([]);
-const MAX_SEEN = 10;
+const MAX_ITEMS = 10;
 
 onNuxtReady(() => {
   setTimeout(async () => {
@@ -75,7 +75,7 @@ onNuxtReady(() => {
     const sdk = useSdk();
 
     const results = await Promise.all(
-      items.slice(0, MAX_SEEN).map(async (item) => {
+      items.slice(0, MAX_ITEMS).map(async (item) => {
         try {
           const { data } = await sdk.plentysystems.getProduct({
             id: item.itemId,
