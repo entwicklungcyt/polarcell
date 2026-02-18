@@ -122,8 +122,7 @@
           <span>
             &copy; {{ new Date().getFullYear() }} {{ companyName }} / {{ t('Footer.copyRight.3') }}
           </span>
-          <span>
-            <sup> *</sup>
+          <span class="before:content-['\00a0']">
             <i18n-t keypath="Footer.copyRight.1">
               <template #inclExcl>
                 {{ showNetPrices ? t('product.priceExclVAT') : t('product.priceInclVAT') }}.
@@ -135,7 +134,7 @@
               </template>
             </i18n-t>
           </span>
-          <span><sup> **</sup>{{ t('Footer.copyRight.2', {currency: currency}) }}</span>
+          <span><sup> *</sup>{{ t('Footer.copyRight.2', {currency: currency}) }}</span>
           <a class="block" href="https://www.createyourtemplate.com" target="_blank" title="Lösungen für den eCommerce - Online Shops, eBay Shops und Templates, Widgets, Design, Programmierung, Fullservice, Branding - createyourtemplate GmbH & Co. KG - Berlin, Germany">
             powered by <span class="text-primary-500 font-extrabold">createyourtemplate</span>
           </a>

@@ -31,14 +31,14 @@
           />
           <p class="tabular-nums text-[14px]">({{ splitRatings[key] }})</p>
         </div>
-        <div v-else class="text-center text-sm">{{ t('product.noReviews') }}</div>
-        <p
+        <div v-else class="text-center xl:text-[18px]">{{ t('product.noReviews') }}</div>
+        <UiButton
           @click="openReviewModal(defaults.DEFAULT_REVIEW_MODAL_TYPES.createReview)"
-          class="inline-block text-center text-sm underline block w-full pt-[10px] cursor-pointer font-medium"
+          class="inline-block text-center mt-[10px] cursor-pointer !font-semibold bg-primary-500"
           aria-label="Bewertung abgeben"
         >
           {{ t('product.createReview') }}
-        </p>
+        </UiButton>
       </div>
   </div>
 </template>

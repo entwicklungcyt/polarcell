@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-[40px]">
+  <div class="pt-[40px] xl:pt-[60px]">
     <button @click.stop.prevent="isOpen = true"
         class="
             flex items-center justify-center

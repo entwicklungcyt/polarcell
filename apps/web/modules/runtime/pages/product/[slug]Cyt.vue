@@ -30,19 +30,22 @@
         <!-- Kompatibilitäten -->
         <div>
           <div class="sticky top-[20px] [.slim-header-active_&]:top-[80px]">
-            <div v-html="productGetters.getTechnicalData(product)" class="text-[18px] space-y-4 [&_p]:font-extrabold [&_p]:italic [&_p]:mb-[15px]"></div>
+            <div v-html="productGetters.getTechnicalData(product)" class="text-[18px] space-y-4 [&_p]:font-extrabold [&_p]:italic [&_p]:mb-[15px] xl:[&_p]:pb-[10px]"></div>
             <!-- Hersteller -->
             <div v-if="manufacturerHtml" class="pt-[40px]">
               <p class="font-extrabold italic text-[18px] mb-[15px]">{{ t('manufacturer.header') }}:</p>
               <div v-html="manufacturerHtml" class="leading-[1.25] text-[18px]"></div>
-              <a href="/batterieentsorgung" target="_blank" class="underline pt-[20px] text-[18px] flex items-center gap-[10px]">{{ t('Footer.Link Titel.3') }}</a>
+              <a href="/batterieentsorgung" target="_blank" class="flex items-center gap-[5px] underline pt-[20px] text-[18px] flex items-center gap-[10px]">
+                <svg class="h-[35px] w-auto" xmlns="http://www.w3.org" viewBox="0 0 100 120" width="100" height="120"><path d="M25 35h50l-5 55H30z" fill="none" stroke="black" stroke-width="5"/><path d="M20 35h60M35 35l2-10h26l2 10" fill="none" stroke="black" stroke-width="5"/><circle cx="35" cy="95" r="5" fill="black"/><circle cx="65" cy="95" r="5" fill="black"/><line x1="15" y1="25" x2="85" y2="105" stroke="black" stroke-width="8"/><line x1="85" y1="25" x2="15" y2="105" stroke="black" stroke-width="8"/></svg>
+                {{ t('Footer.Link Titel.3') }}
+              </a>
             </div>
           </div>
         </div>
         <!-- Zusatzinformationen (Technische Daten - etwas verwirrend, da die echten "Technische Daten" im Kompatibilitäten DIV sind) -->
         <div v-if="additionalInfoHtml">
-          <div class="sticky top-[20px] [.slim-header-active_&]:top-[80px]">
-            <p class="text-[18px] font-extrabold italic mb-[15px]">{{ t('common.labels.technicalData') }}:</p>
+          <div class="sticky top-[20px] [.slim-header-active_&]:top-[80px] text-[18px]">
+            <p class="text-[18px] font-extrabold italic mb-[15px] xl:pb-[10px]">{{ t('common.labels.technicalData') }}:</p>
             <div v-html="additionalInfoHtml"></div>
           </div>
         </div>
@@ -88,7 +91,7 @@
       <!-- Last Seen Section -->
       <LastSeenCyt :exclude-variation-id="product?.variation?.id" />
 
-      <TrustedShops />
+      <TrustedShops class="mb-[-40px] xl:mb-[-80px] 4xl:mb-[-120px]" />
     </NarrowContainer>
 
     <UiReviewModal />
@@ -298,12 +301,12 @@ const additionalInfoHtml = computed(() => {
 
   const items = (additionalInfoGroup.value as ProductProperty[])
     .filter((prop) => allowedIdsForAdditionalInfo.includes(prop.id))
-    .map((prop) => `<li class="text-right flex items-center gap-[10px] odd:bg-[#F7F7F7] p-[10px] before:content-[''] before:w-[25px] before:h-[25px] before:bg-[#d83300] before:rounded-full before:flex before:items-center before:justify-center property-${prop.id} order-[${prop.position}]"><strong class="mr-auto">${prop.names.name}:</strong> ${prop.values.value}</li>`);
+    .map((prop) => `<li class="min-h-[50px] text-right flex items-center gap-[10px] odd:bg-[#F7F7F7] p-[10px] before:content-[''] before:w-[25px] before:h-[25px] before:bg-[#d83300] before:rounded-full before:flex before:items-center before:justify-center property-${prop.id} order-[${prop.position}]"><strong class="mr-auto">${prop.names.name}:</strong> ${prop.values.value}</li>`);
 
   // Add dimensions from variation data
   const { widthMM, lengthMM, heightMM } = product?.value?.variation ?? {};
   if (widthMM || lengthMM || heightMM) {
-    items.push(`<li class="text-right flex items-center gap-[10px] odd:bg-[#F7F7F7] p-[10px] before:content-[''] before:w-[25px] before:h-[25px] before:bg-[#d83300] before:rounded-full before:flex before:items-center before:justify-center property-18 order-[0]"><strong class="mr-auto">${t('Produktseite.Maße')}:</strong> L:${lengthMM} × B:${widthMM} × H:${heightMM} mm</li>`);
+    items.push(`<li class="min-h-[50px] text-right flex items-center gap-[10px] odd:bg-[#F7F7F7] p-[10px] before:content-[''] before:w-[25px] before:h-[25px] before:bg-[#d83300] before:rounded-full before:flex before:items-center before:justify-center property-18 order-[0]"><strong class="mr-auto">${t('Produktseite.Maße')}:</strong> L:${lengthMM} × B:${widthMM} × H:${heightMM} mm</li>`);
   }
 
   return `<ul class="flex flex-col">${items.join('')}</ul>`;
