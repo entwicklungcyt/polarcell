@@ -1,6 +1,6 @@
 <template>
   <div class="max-w-6xl mx-auto p-6 space-y-8">
-    <h1 class="text-3xl font-extrabold italic text-primary-500">Versand & Lieferung</h1>
+    <h1 class="text-3xl font-extrabold italic text-primary-500">Versand & Lieferung nach {{ countries.find(c => c.code === selectedCountry)?.name }}</h1>
 
     <div class="space-y-4">
       <p class="text-gray-700">Bitte wählen Sie Ihr Lieferland.</p>
@@ -23,8 +23,6 @@
         </option>
       </select>
     </div>
-
-    <hr class="border-gray-300">
 
     <!-- Shipping Methods -->
     <div class="space-y-8">
