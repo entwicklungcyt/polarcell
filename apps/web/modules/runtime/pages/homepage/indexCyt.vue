@@ -13,7 +13,7 @@
     <HomeCategories />
 
     <!-- Recommended Products -->
-    <RecommendedProducts categoryId="74" headline="Unsere Topseller Handy-Akkus" cacheKey="homepage" class="pt-[45px] xl:pt-[60px] 4xl:pt-[80px]" />
+    <RecommendedProducts categoryId="74" :headline="$t('Topseller Startseite')" cacheKey="homepage" class="pt-[45px] xl:pt-[60px] 4xl:pt-[80px]" />
 
     <!-- USP Slider -->
     <UspSlider />
