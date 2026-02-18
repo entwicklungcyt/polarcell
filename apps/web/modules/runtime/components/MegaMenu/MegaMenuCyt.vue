@@ -97,11 +97,12 @@
           <span v-if="cartItemsCount > 0" class="badge font-bold text-white text-[14px]" data-testid="cart-badge">{{ cartItemsCount }}</span>
         </NuxtLink>
       </div>
-
+      
+      <!-- Main Navigation -->
       <ul v-if="viewport.isGreaterOrEquals('lg')"
-        class="flex lg:col-span-3 uppercase text-[16px] text-white gap-[35px] motion-safe:scroll-smooth overflow-x-auto scrollbar-hidden justify-center mx-auto"
+        class="flex lg:col-span-3 uppercase text-[16px] text-white gap-[35px] motion-safe:scroll-smooth overflow-x-auto scrollbar-hidden justify-center mx-auto xl:overflow-visible"
         :class="{'order-[-1] col-span-1 lg:gap-[15px]': $attrs.isSlimHeader}">
-        <li v-for="(menuNode, index) in categoryTree" :key="index">
+        <li v-for="(menuNode, index) in categoryTree" :key="index" class="relative group">
           <NuxtLink :to="localePath(generateCategoryLink(menuNode))">
             <span
               class="pb-[15px] lg:pt-[25px] block whitespace-nowrap relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[1px] after:bg-white after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
@@ -116,6 +117,20 @@
               {{ categoryTreeGetters.getName(menuNode).replace(' - ', '-') }}
             </span>
           </NuxtLink>
+
+          <!-- Dropdown: xl+ only, pure CSS hover, no JS -->
+          <ul
+            v-if="menuNode.children && menuNode.children.length > 0"
+            class="hidden xl:group-hover:block absolute top-full left-0 right-0 bg-black text-white z-50 shadow-lg
+                  [&_a]:block [&_a]:px-5 [&_a]:py-2 [&_a]:text-[14px] [&_a]:normal-case [&_a]:tracking-normal [&_a]:whitespace-nowrap [&_a]:transition-colors [&_a]:duration-150
+                  [&_a:hover]:bg-white [&_a:hover]:text-black"
+          >
+            <li v-for="child in menuNode.children" :key="child.id">
+              <NuxtLink :to="localePath(generateCategoryLink(child))">
+                {{ categoryTreeGetters.getName(child) }}
+              </NuxtLink>
+            </li>
+          </ul>
         </li>
       </ul>
       <div v-if="!$attrs.isSlimHeader" class="flex gap-[20px] items-center pt-[20px] lg:pt-0 col-span-2 lg:order-[-1] lg:col-span-1">
