@@ -98,6 +98,8 @@
           <! - - <PayPalPayLaterBanner placement="product" :amount="priceWithProperties * quantitySelectorValue" /> - - >
         </div>
       </div> -->
+      <!-- payment icons -->
+      <div class="pt-[20px] drop-shadow-[0_0_1px_rgba(0,0,0,0.25)]"><img src="https://cdn02.plentymarkets.com/91tuepbzlonh/frontend/pwa/p-icons2.avif" class="w-full sm:max-w-[309px] xl:max-w-[414px] xl:ml-auto" loading="lazy" alt="Payment icons"></div>
       <!-- Fragen -->
       <div class="pt-[30px] xl:pt-[60px]">
         <div class="flex flex-col gap-[10px] xl:gap-[20px]">
