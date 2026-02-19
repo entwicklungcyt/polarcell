@@ -14,15 +14,14 @@
             pb-[20px] sm:pb-[40px]
             sm:text-[18px] lg:text-[14px] 2xl:text-[18px]
         ">
-            <span class="
-                border border-black border-[2px] 2xl:border-[3px]
-                bg-white
+            <span class="text-white
+                border border-white border-[2px] 2xl:border-[3px]
                 min-h-[40px] sm:min-h-[60px] lg:min-h-[40px] 2xl:min-h-[60px]
                 rounded-[20px] sm:rounded-[30px] lg:rounded-[20px] 2xl:rounded-[30px]
                 px-[20px] sm:px-[30px] lg:px-[20px] 2xl:px-[30px]
                 flex justify-center items-center
-                group-hover:bg-black group-hover:text-white transition-colors
-            ">
+                group-hover:!bg-white group-hover:text-black transition-colors
+            " :style="{ backgroundColor: category.bg }">
             {{ category.name }}
             </span>
         </span>
@@ -35,17 +34,20 @@
         {
             name: t('HomeCategories.01.name'),
             url: t('HomeCategories.01.url'),
-            img: t('HomeCategories.01.img')
+            img: t('HomeCategories.01.img'),
+            bg: '#e8cb48'
         },
         {
             name: t('HomeCategories.02.name'),
             url: t('HomeCategories.02.url'),
-            img: t('HomeCategories.02.img')
+            img: t('HomeCategories.02.img'),
+            bg: '#f58c31'
         },
         {
             name: t('HomeCategories.03.name'),
             url: t('HomeCategories.03.url'),
-            img: t('HomeCategories.03.img')
+            img: t('HomeCategories.03.img'),
+            bg: '#00A4CC'
         },
     ]
 </script>
