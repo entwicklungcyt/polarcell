@@ -1,0 +1,147 @@
+{
+    "Header": {
+        "Claim1": "Ihr Hersteller für mobile Energie",
+        "Claim2a": "Kostenloser Briefversand",
+        "Claim2b": "innerhalb Deutschlands",
+        "Search": "Modellbezeichnung oder Modellnummer"
+    },
+    "Footer": {
+        "Hotline": "+49 30 80498134",
+        "Email": "{'service@polarcell.de'}",
+        "Service-Zeiten": {
+            "1": "[strong]Deutscher Telefonsupport[/strong] von Fachpersonal",
+            "2": "[strong]Sie erreichen uns:[/strong] Montag - Freitag:  9.00  - 17.00 Uhr"
+        },
+        "Straße": "Barnhelmstraße 17d",
+        "PLZ Ort": "14129 Berlin",
+        "Listen Überschriften": {
+            "1": "Informationen",
+            "2": "Über uns"
+        },
+        "Link Titel": {
+            "1": "Herstellergarantie",
+            "2": "Versandinformationen",
+            "3": "Batterieentsorgung",
+            "4": "Service",
+            "5": "Unternehmen"
+        },
+        "Sicherheit": "Sicher einkaufen",
+        "copyRight": {
+            "1": "Alle Preise sind {inclExcl} und zzgl. {Versandkosten}.",
+            "2": "Kostenloser Standardversand innerhalb Deutschlands.",
+            "3": "Polarcell. Alle Rechte vorbehalten."
+        }
+    },
+    "HomeEyeCatcher": {
+        "text1": "Die Premium Marke für",
+        "text2": "Die Premium +Akkumarke",
+        "text3": "Ihr Hersteller für mobile Energie",
+        "usps": {
+            "1": "[Beste Qualitätszellen]+für eine maximale+Lebensdauer",
+            "2": "[Deutsche Markenware]+streng kontrolliert nach+allen EU - Normen",
+            "3": "[24 Monate+Garantie]+auf alle Akkus",
+            "4": "[Stärkste erwerbare]+Akkus+ihrer Bauart",
+            "5": "[Zuverlässige+Schutzschaltungselektronik]+für Ihre Sicherheit",
+            "6": "[Längere Laufzeit]+dank höherer Kapazität"
+        }
+    },
+    "Finder": {
+        "Title": "Finden Sie schnell den passenden Akku",
+        "SelectLevel1": "Akku-Typ wählen",
+        "SelectLevel2": "Hersteller wählen",
+        "SelectLevel3": "Modell wählen",
+        "Button": "Ergebnisse anzeigen",
+        "ButtonCount1": "Ergebniss anzeigen"
+    },
+    "HomeCategories": {
+        "01": {
+            "name": "Handy-Akkus",
+            "url": "/handy-akkus",
+            "img": "https://cdn02.plentymarkets.com/91tuepbzlonh/frontend/pwa/handy-akkus.avif"
+        },
+        "02": {
+            "name": "Standard-Akkus",
+            "url": "/standard-akkus",
+            "img": "https://cdn02.plentymarkets.com/91tuepbzlonh/frontend/pwa/standar-akkus3.avif"
+        },
+        "03": {
+            "name": "Zubehör",
+            "url": "/handy-akkus/zubehoer",
+            "img": "https://cdn02.plentymarkets.com/91tuepbzlonh/frontend/pwa/acc3.avif"
+        }
+    },
+    "Topseller Startseite": "Unsere Topseller Handy-Akkus",
+    "TrustedShops": {
+        "Bewertung1": "Bewertungen (letzte 12 Mon.)",
+        "Bewertung2": "Bewertungen (gesamt)",
+        "Stand": "Stand:"
+    },
+    "Seo": {
+        "Titel": "PolarCell – Die Premium Akkumarke",
+        "Beschreibung": "[p][strong]Seit über 20 Jahren ist es unser Ziel unseren Kunden Akkus von höchster Qualität, Kapazität und Sicherheit zur Verfügung zu stellen.[/strong][/p][p]Als einer der wenigen deutschen Akkuhändler verfügen wir daher über ein eigenes Akkuprüflabor, in welchem unser qualifiziertes Fachpersonal täglich dafür sorgt, Ihnen als Endkunde nur die hochwertigsten und sichersten Produkte anbieten zu können. Zur Abgrenzung gegenüber marktüblicher „Billigware“ wurde daher im Jahre 2005 die Premium-Marke PolarCell ins Leben gerufen und steht seit dem für High-End Produkte im Akkumulatoren-Bereich.[/p]",
+        "Bild": "https://cdn02.plentymarkets.com/91tuepbzlonh/frontend/pwa/eyecatcher.avif"
+    },
+    "Faq": {
+        "Title": "Häufig gestellte Fragen",
+        "Faqs": {
+            "test": "test",
+            "01": {
+                "question": "Wie lange halten PolarCell-Akkus?",
+                "answer": "Die Haltbarkeit eines Akkus hängt von verschiedenen Faktoren ab, wie z.B. der Nutzung, dem Wetter und der Qualität des Akkus. Im Allgemeinen halten PolarCell-Akkus länger als andere Akkus, da sie aus hochwertigen Materialien hergestellt werden und eine lange Lebensdauer haben."
+            },
+            "02": {
+                "question": "Sed ut perspiciatis unde omnis iste natus?",
+                "answer": "Nemo enim ipsam voluptatem quia voluptas sit [strong]aspernatur aut odit aut fugit[/strong], sed quia consequuntur magni eos qui ratione voluptatem.  Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, numquam eius modi tempora incidunt ut labore et dolore. [a:/unternehmen]Nemo enim  ipsam voluptatem[/a] quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni eos qui ratione voluptatem. Neque porro  quisquam est, qui dolorem ipsum quia dolor sit amet, numquam eius modi tempora incidunt ut labore et dolore. Nemo enim ipsam voluptatem  quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni eos qui ratione voluptatem. Neque porro quisquam est, qui  dolorem ipsum quia dolor sit amet, numquam eius modi tempora incidunt ut labore et dolore. Nemo enim ipsam voluptatem quia voluptas sit  aspernatur aut odit aut fugit, sed quia consequuntur magni eos qui ratione voluptatem. Neque porro quisquam est, qui dolorem ipsum quia  dolor sit amet, numquam eius modi tempora incidunt ut labore et dolore. "
+            },
+            "03": {
+                "question": "Corporis suscipit nisi ut  aliquid ea commodi consequatur?",
+                "answer": "Die Haltbarkeit eines Akkus hängt von verschiedenen Faktoren ab, wie z.B. der Nutzung, dem Wetter und der Qualität des Akkus. Im Allgemeinen halten PolarCell-Akkus länger als andere Akkus, da sie aus hochwertigen Materialien hergestellt werden und eine lange Lebensdauer haben."
+            },
+            "04": {
+                "question": "",
+                "answer": ""
+            },
+            "05": {
+                "question": "",
+                "answer": ""
+            },
+            "06": {
+                "question": "",
+                "answer": ""
+            },
+            "07": {
+                "question": "",
+                "answer": ""
+            },
+            "08": {
+                "question": "",
+                "answer": ""
+            },
+            "09": {
+                "question": "",
+                "answer": ""
+            },
+            "10": {
+                "question": "",
+                "answer": ""
+            }
+        }
+    },
+    "Produktseite": {
+        "Versand": "Kostenloser Versand*",
+        "Kompatibilitäts-Checker": {
+            "title": "Kompatibilitäts-Checker",
+            "text1": "Passt dieser Akku?",
+            "text2": "Passt dieser Akku in mein Gerät?",
+            "button": "Kompatibilität prüfen"
+        },
+        "Fragen": {
+            "01": "Sie haben Fragen? Unser Kundencenter hilft!",
+            "02": "Kontaktformular",
+            "03": "Telefon"
+        },
+        "Kompatibilitäten": "Kompatibilitäten",
+        "Maße": "Maße",
+        "Zuletzt angesehen": "Zuletzt angesehen"
+    }
+}
