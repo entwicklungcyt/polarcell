@@ -68,6 +68,6 @@ const splitRatings = computed(() => reviewGetters.getReviewCountsOrPercentagesBy
 
 // write a review
 if (route.fullPath.split('#')[1] === 'bewertung_abgeben') {
-  openReviewModal(defaults.DEFAULT_REVIEW_MODAL_TYPES.createReview);
+  openReviewModal(defaults.DEFAULT_REVIEW_MODAL_TYPES.createReview); 
 }
 </script>
