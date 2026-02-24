@@ -1,5 +1,5 @@
 <template>
-  <div v-if="!loading && product?.texts" class="max-w-[900px] mx-auto">
+  <div v-if="!loading && product?.texts" class="max-w-[900px] mx-auto" id="global-acc">
     <div class="pt-[30px] xl:pt-[50px] font-extrabold italic sm:text-[16px] xl:text-[18px]">
       Gleich mitbestellen
     </div>

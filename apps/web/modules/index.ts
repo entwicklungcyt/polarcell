@@ -103,6 +103,11 @@ export default defineNuxtModule({
         path: 'LastSeen/LastSeenCyt.vue',
         global: false,
       },
+      {
+        name: 'CrossSellingItemsAccessoryCyt',
+        path: 'CrossSelling/CrossSellingItemsAccessoryCyt.vue',
+        global: false,
+      },
     ];
 
     for (const { name, path, global } of components) {
