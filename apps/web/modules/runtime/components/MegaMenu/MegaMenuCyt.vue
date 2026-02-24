@@ -47,7 +47,7 @@
           <template #trigger>
             <UiButton
               variant="tertiary"
-              class="!flex !text-black p-0 !text-[14px] !p-0 hover:bg-white active:bg-white gap-[10px]"
+              class="!flex !text-black p-0 !text-[14px] !p-0 hover:bg-white active:bg-white gap-[10px] hover:!bg-black"
               data-testid="account-dropdown-button"
               @click="accountDropdownToggle()"
             >

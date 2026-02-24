@@ -48,7 +48,9 @@ import { SfProgressLinear, SfIconStarFilled } from '@storefront-ui/vue';
 import type { ReviewStatisticsProps } from './types';
 import { productGetters, reviewGetters } from '@plentymarkets/shop-api';
 import { defaults } from '~/composables';
+import { useRoute } from 'vue-router';
 
+const route = useRoute();
 const props = defineProps<ReviewStatisticsProps>();
 
 const productId = Number(productGetters.getItemId(props.product));
@@ -63,4 +65,9 @@ const ratingPercentages = computed(() =>
   reviewGetters.getReviewCountsOrPercentagesByRatingDesc(countsProductReviews.value, true),
 );
 const splitRatings = computed(() => reviewGetters.getReviewCountsOrPercentagesByRatingDesc(countsProductReviews.value));
+
+// write a review
+if (route.fullPath.split('#')[1] === 'bewertung_abgeben') {
+  openReviewModal(defaults.DEFAULT_REVIEW_MODAL_TYPES.createReview);
+}
 </script>
