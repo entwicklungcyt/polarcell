@@ -1,10 +1,14 @@
 <template>
-  <div class="flex gap-[10px] align-baseline text-[24px] xl:text-[30px] leading-[1] xl:pt-[50px] [*[aria-label='quick-checkout-modal']_&]:hidden">
-    <span v-if="crossedPrice && differentPrices" class="line-through">
+  <div class="flex items-center gap-[10px] align-baseline text-[24px] xl:text-[30px] leading-[1] xl:pt-[50px] [*[aria-label='quick-checkout-modal']_&]:hidden">
+    <span data-testid="price">
+      <span class="font-extrabold">{{ format(price) }}</span>
+    </span>
+    <span v-if="crossedPrice && differentPrices" class="text-primary-500 font-bold line-through text-[14px] sm:text-[16px] xl:text-[18px]">
       {{ format(crossedPrice) }}
     </span>
-    <span :class="crossedPrice && differentPrices ? 'text-primary-500' : ''" data-testid="price">
-      <span class="font-extrabold">{{ format(price) }}</span>
+
+    <span v-if="price && crossedPrice" class="flex items-center text-white bg-primary-500 text-[12px] sm:text-[14px] xl:text-[18px] px-[5px] xl:px-[10px] min-h-[20px] xl:min-h-[30px] rounded-[10px] xl:rounded-[15px] font-extrabold">
+      -{{ savingPercentage(price, crossedPrice) }}%
     </span>
   </div>
 </template>
@@ -21,6 +25,11 @@ const differentPrices = computed(() => {
     ? Math.round(props.price * 100) / 100 !== Math.round(props.crossedPrice * 100) / 100
     : false;
 });
+
+const savingPercentage = (price: number, crossedPrice: number): number => {
+  if (!crossedPrice || crossedPrice <= price) return 0;
+  return Math.round((1 - price / crossedPrice) * 100);
+};
 </script>
 
 <style>

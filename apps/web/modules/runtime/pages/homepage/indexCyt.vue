@@ -13,7 +13,12 @@
     <HomeCategories />
 
     <!-- Recommended Products -->
-    <RecommendedProducts categoryId="74" :headline="$t('Topseller Startseite')" cacheKey="homepage" class="pt-[45px] xl:pt-[60px] 4xl:pt-[80px]" />
+    <RecommendedProducts
+      :categoryId="String(topsellerCategoryId)"
+      :headline="$t('Topseller Startseite')"
+      cacheKey="homepage"
+      class="pt-[45px] xl:pt-[60px] 4xl:pt-[80px]"
+    />
 
     <!-- USP Slider -->
     <UspSlider />
@@ -75,4 +80,9 @@ const { setBlocksListContext } = useBlocksList();
 setBlocksListContext('content');
 
 const { data: categoryTree } = useCategoryTree();
+
+const topsellerCategoryId = computed(() => {
+  const id = Number(t('Topseller Kategorie ID Startseite'))
+  return Number.isInteger(id) && id > 0 ? String(id) : undefined
+})
 </script>

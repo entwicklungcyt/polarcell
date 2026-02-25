@@ -70,7 +70,8 @@
             "img": "https://cdn02.plentymarkets.com/91tuepbzlonh/frontend/pwa/acc3.avif"
         }
     },
-    "Topseller Startseite": "Unsere Topseller Handy-Akkus",
+    "Topseller Startseite": "Unsere Topseller iPhone-Akkus",
+    "Topseller Kategorie ID Startseite": "90",
     "TrustedShops": {
         "Bewertung1": "Bewertungen (letzte 12 Mon.)",
         "Bewertung2": "Bewertungen (gesamt)",
@@ -86,20 +87,20 @@
         "Faqs": {
             "test": "test",
             "01": {
-                "question": "Wie lange halten PolarCell-Akkus?",
-                "answer": "Die Haltbarkeit eines Akkus hängt von verschiedenen Faktoren ab, wie z.B. der Nutzung, dem Wetter und der Qualität des Akkus. Im Allgemeinen halten PolarCell-Akkus länger als andere Akkus, da sie aus hochwertigen Materialien hergestellt werden und eine lange Lebensdauer haben."
+                "question": "Warum PolarCell und nicht ein Originalakku?",
+                "answer": "PolarCell legt dieselben Qualitätsstandards zugrunde wie die Originalakkus und erreicht durch Zelloptimierung und Selektion in der Regel sogar höhere Kapazitäten als die Originalakkus. Echte (!), neue (!) Originalakkus zu finden ist selbst für uns schwer, der Markt ist leider von aufgearbeiteter Gebrauchtware bzw. Plagiaten überschwemmt. Findet man doch einen echten Originalakku kostet dieser mind. das Doppelte von einem PolarCell Akku und wie lange dieser vorher ungenutzt gelagert wurde kann man schwer nachvollziehen. PolarCell Akkus werden regelmäßig nachproduziert, Sie erhalten also stets frische und dem Original qualitativ ebenwürdige Ware zu einem fairen Preis."
             },
             "02": {
-                "question": "Sed ut perspiciatis unde omnis iste natus?",
-                "answer": "Nemo enim ipsam voluptatem quia voluptas sit [strong]aspernatur aut odit aut fugit[/strong], sed quia consequuntur magni eos qui ratione voluptatem.  Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, numquam eius modi tempora incidunt ut labore et dolore. [a:/unternehmen]Nemo enim  ipsam voluptatem[/a] quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni eos qui ratione voluptatem. Neque porro  quisquam est, qui dolorem ipsum quia dolor sit amet, numquam eius modi tempora incidunt ut labore et dolore. Nemo enim ipsam voluptatem  quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni eos qui ratione voluptatem. Neque porro quisquam est, qui  dolorem ipsum quia dolor sit amet, numquam eius modi tempora incidunt ut labore et dolore. Nemo enim ipsam voluptatem quia voluptas sit  aspernatur aut odit aut fugit, sed quia consequuntur magni eos qui ratione voluptatem. Neque porro quisquam est, qui dolorem ipsum quia  dolor sit amet, numquam eius modi tempora incidunt ut labore et dolore. "
+                "question": "Habe ich Garantie auf den Akku und was zählt als Garantiefall",
+                "answer": "Auf unsere PolarCell Akkus erhalten Sie volle 24 Monate Garantie. Diese deckt sowohl den Totalausfall als auch eine unnatürliche Degradation der Zellen ab. Der PolarCell Akku sollte hierbei nach zwei Jahren bzw. maximal 500 Ladezyklen noch mind. 80% seiner Ausgangsleistung erbringen."
             },
             "03": {
-                "question": "Corporis suscipit nisi ut  aliquid ea commodi consequatur?",
-                "answer": "Die Haltbarkeit eines Akkus hängt von verschiedenen Faktoren ab, wie z.B. der Nutzung, dem Wetter und der Qualität des Akkus. Im Allgemeinen halten PolarCell-Akkus länger als andere Akkus, da sie aus hochwertigen Materialien hergestellt werden und eine lange Lebensdauer haben."
+                "question": "Schaffe ich den Umbau bei neueren Handymodellen mit fest verbauten Akkus auch selbst?",
+                "answer": "Wir empfehlen sich hierfür bei z.B. YouTube vorab ein paar Umbauvideos anzusehen. Anhand dieser Umbauanleitungen sollte man gut einschätzen können, ob man sich den Umbau selbst zutraut oder nicht. Unser universelles Werkzeugset ist sehr hilfreich, wenn man selbst kein Spezialwerkzeug hierfür besitzt. Im Zweifel bietet jeder gute Elektrofachmarkt einen entsprechenden Einbauservice an."
             },
             "04": {
-                "question": "",
-                "answer": ""
+                "question": "Wie lange kann ich die Akkus ungenutzt einlagern – macht es Sinn gerade für ältere Geräte Akkus auf Vorrat zu kaufen?",
+                "answer": "Ungenutzt sollten die Akkus mind. alle 6 Monate auf ca. 80% nachgeladen werden, um eine Tiefentladung zu vermeiden. Da jedoch auch ungenutzte Akkus langsam degradieren raten wir von einem Kauf auf Vorrat ab. Fragen Sie im Zweifel bei uns an wie lange das benötigte Modell voraussichtlich noch im Sortiment sein wird und kaufen dann lieber frische Ware."
             },
             "05": {
                 "question": "",

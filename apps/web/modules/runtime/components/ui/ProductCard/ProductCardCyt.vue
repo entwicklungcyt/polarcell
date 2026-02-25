@@ -32,12 +32,15 @@
     </div>
     <div class="flex flex-col flex-auto text-[14px] md:text-[16px] lg:text-[18px] leading-[1.25] pt-[10px] sm:pt-[20px] xl:pt-[30px]" @click="navigateTo(productPath)">
       <div class="no-underline xl:text-[21px]" data-testid="productcard-name">{{ name }}</div>
-      <div class="flex items-start mt-auto gap-[10px] pt-[5px]">
+      <div class="flex items-center mt-auto gap-[10px] pt-[5px]">
         <span class="block xl:text-[21px]" data-testid="product-card-vertical-price">
           <span class="font-extrabold">{{ format(price) }}</span>
         </span>
-        <span v-if="crossedPrice" class="line-through xl:text-[16px]">
+        <span v-if="crossedPrice" class="line-through xl:text-[16px] text-primary-500 text-[10px] sm:text-[12px] font-bold">
           {{ format(crossedPrice) }}
+        </span>
+        <span v-if="price && crossedPrice" class="hidden sm:flex items-center text-white bg-primary-500 text-[12px] sm:text-[14px] xl:text-[18px] px-[5px] xl:px-[10px] min-h-[20px] xl:min-h-[30px] rounded-[10px] xl:rounded-[15px] font-extrabold">
+          -{{ savingPercentage(price, crossedPrice) }}%
         </span>
       </div>
       <div class="text-[10px] xl:text-[12px] flex flex-wrap gap-x-[5px] pt-[5px] xl:pt-[10px] 2xl:pt-[15px]">
@@ -192,6 +195,11 @@ const getHeight = () => {
 // const differentPrices = (price: number, crossedPrice: number) => {
 //   return crossedPrice ? Math.round(price * 100) / 100 !== Math.round(crossedPrice * 100) / 100 : false;
 // };
+
+const savingPercentage = (price: number, crossedPrice: number): number => {
+  if (!crossedPrice || crossedPrice <= price) return 0;
+  return Math.round((1 - price / crossedPrice) * 100);
+};
 
 const NuxtLink = resolveComponent('NuxtLink');
 
