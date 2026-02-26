@@ -36,10 +36,10 @@
         <span class="block xl:text-[21px]" data-testid="product-card-vertical-price">
           <span class="font-extrabold">{{ format(price) }}</span>
         </span>
-        <span v-if="crossedPrice" class="line-through xl:text-[16px] text-primary-500 text-[10px] sm:text-[12px] font-bold">
+        <span v-if="crossedPrice && differentPrices(price, crossedPrice)" class="line-through xl:text-[16px] text-primary-500 text-[10px] sm:text-[12px] font-bold">
           {{ format(crossedPrice) }}
         </span>
-        <span v-if="price && crossedPrice" class="hidden sm:flex items-center text-white bg-primary-500 text-[12px] sm:text-[14px] xl:text-[18px] px-[5px] xl:px-[10px] min-h-[20px] xl:min-h-[30px] rounded-[10px] xl:rounded-[15px] font-extrabold">
+        <span v-if="crossedPrice && differentPrices(price, crossedPrice)" class="hidden sm:flex items-center text-white bg-primary-500 text-[12px] sm:text-[14px] xl:text-[18px] px-[5px] xl:px-[10px] min-h-[20px] xl:min-h-[30px] rounded-[10px] xl:rounded-[15px] font-extrabold">
           -{{ savingPercentage(price, crossedPrice) }}%
         </span>
       </div>
@@ -192,9 +192,9 @@ const getHeight = () => {
 //    loading.value = false;
 //  }
 // };
-// const differentPrices = (price: number, crossedPrice: number) => {
-//   return crossedPrice ? Math.round(price * 100) / 100 !== Math.round(crossedPrice * 100) / 100 : false;
-// };
+const differentPrices = (price: number, crossedPrice: number) => {
+  return crossedPrice ? Math.round(price * 100) / 100 !== Math.round(crossedPrice * 100) / 100 : false;
+};
 
 const savingPercentage = (price: number, crossedPrice: number): number => {
   if (!crossedPrice || crossedPrice <= price) return 0;

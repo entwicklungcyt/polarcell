@@ -7,7 +7,7 @@
       {{ format(crossedPrice) }}
     </span>
 
-    <span v-if="price && crossedPrice" class="flex items-center text-white bg-primary-500 text-[12px] sm:text-[14px] xl:text-[18px] px-[5px] xl:px-[10px] min-h-[20px] xl:min-h-[30px] rounded-[10px] xl:rounded-[15px] font-extrabold">
+    <span v-if="crossedPrice && differentPrices" class="flex items-center text-white bg-primary-500 text-[12px] sm:text-[14px] xl:text-[18px] px-[5px] xl:px-[10px] min-h-[20px] xl:min-h-[30px] rounded-[10px] xl:rounded-[15px] font-extrabold">
       -{{ savingPercentage(price, crossedPrice) }}%
     </span>
   </div>
