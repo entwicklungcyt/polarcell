@@ -52,22 +52,24 @@ const cleanCategoryName = (name: string) => {
 };
 
 // Rich Snippets
-useHead({
-  script: [
-    {
-      type: 'application/ld+json',
-      innerHTML: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'BreadcrumbList',
-        itemListElement: props.breadcrumbs.map((item, index) => ({
-          '@type': 'ListItem',
-          position: index + 1,
-          name: cleanCategoryName(item.name),
-          item: item.link !== '#' ? `${baseUrl}${item.link}` : undefined,
-        })),
-      }),
-    },
-  ],
-});
+if (props.breadcrumbs.length) {
+  useHead({
+    script: [
+      {
+        type: 'application/ld+json',
+        innerHTML: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: props.breadcrumbs.map((item, index) => ({
+            '@type': 'ListItem',
+            position: index + 1,
+            name: cleanCategoryName(item.name),
+            item: item.link !== '#' ? `${baseUrl}${item.link}` : undefined,
+          })),
+        }),
+      },
+    ],
+  });
+}
 </script>
 
