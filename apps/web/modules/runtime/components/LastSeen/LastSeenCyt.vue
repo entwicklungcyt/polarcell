@@ -48,7 +48,7 @@ const props = defineProps<{
 
 const { t, n } = useI18n();
 const localePath = useLocalePath();
-const { getItems } = useLastSeen();
+const { getItems, remove } = useLastSeen();
 
 const loaded = ref(false);
 
@@ -101,8 +101,12 @@ onNuxtReady(() => {
               url: productUrl,
             } as ProductDisplay;
           }
-        } catch (e) {
-          console.warn(`[LastSeen] Failed to load variation ${item.variationId}`, e);
+        } catch (e: any) {
+          if (e?.code === 404) {
+            remove(item.variationId);
+          } else {
+            console.warn(`[LastSeen] Failed to load variation ${item.variationId}`, e);
+          }
         }
         return null;
       })

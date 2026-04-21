@@ -121,11 +121,6 @@
     <!-- Cross Selling -->
     <CrossSellingItemsAccessoryCyt />
 
-    <!--  Global Accessory (Werkzeugset für alle Smartphone Modelle)
-          PLEASE REOMVE WHEN CROSSSELLING IS READY
-    -->
-    <GlobalAccessory v-if="currentProduct?.item?.id !== 5088 && breadcrumbs?.[1]?.link === '/handy-akkus'" :item-id="5088" :variation-id="6086" />
-
     <!-- Tabs mobile -->
     <div class="pt-[30px] xl:hidden">
       <!-- Kompatibilitäten Tab -->

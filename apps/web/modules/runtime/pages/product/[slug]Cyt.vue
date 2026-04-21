@@ -139,34 +139,47 @@
   
 <script setup lang="ts">
 import type { Product } from '@plentymarkets/shop-api';
+import type { WatchStopHandle } from 'vue';
 import { productGetters, reviewGetters, categoryTreeGetters } from '@plentymarkets/shop-api';
+import type { Locale } from '#i18n';
+
 import { useLastSeen } from '../../composables/useLastSeen';
+
+defineI18nRoute({
+  locales: process.env.LANGUAGELIST?.split(',') as Locale[],
+});
 
 const route = useRoute();
 const { setCurrentProduct } = useProducts();
-
+const { setBlocksListContext } = useBlocksList();
 const { setProductMetaData, setProductRobotsMetaData, setProductCanonicalMetaData } = useStructuredData();
 const { buildProductLanguagePath } = useLocalization();
-const { addModernImageExtensionForGallery } = useModernImage();
 const { productParams, productId } = createProductParams(route.params);
-const { data: product, fetchProduct, setProductMeta, setBreadcrumbs, breadcrumbs } = useProduct(productId);
-const { data: productReviews, fetchProductReviews } = useProductReviews(Number(productId));
-const { data: categoryTree } = useCategoryTree();
-const { open, openDrawer } = useProductLegalDetailsDrawer();
+const { productForEditor, fetchProduct, setProductMeta, setBreadcrumbs, breadcrumbs } = useProduct(productId);
+const product = productForEditor;
+const { disableActions } = useEditor();
+const { fetchProductReviews, fetchProductAuthenticatedReviews } = useProductReviews(Number(productId));
+const { open } = useProductLegalDetailsDrawer();
 const { setPageMeta } = usePageMeta();
+const { resetNotification } = useEditModeNotification(disableActions);
+const { isAuthorized } = useCustomer();
+const { variationId } = useProductAttributes();
+let variationWatchHandler: WatchStopHandle | undefined;
 
-const config = useRuntimeConfig().public;
+const { data: categoryTree } = useCategoryTree();
+const { addModernImageExtensionForGallery } = useModernImage();
 
 definePageMeta({
   layout: false,
-  path: '/:slug*_:itemId',
+  path: '/:slug*:sep(/a-|_):itemId',
   validate: async (route) => {
     return validateProductParams(route.params);
   },
   type: 'product',
-  isBlockified: false,
+  isBlockified: true,
   identifier: 0,
 });
+
 const RecommendedProductsAsync = defineAsyncComponent(
   async () => await import('~/components/RecommendedProducts/RecommendedProducts.vue'),
 );
@@ -177,6 +190,7 @@ const productName = computed(() => productGetters.getName(product.value));
 const icon = 'sell';
 setPageMeta(productName.value, icon);
 
+const { data: productReviews } = useProductReviews(Number(productGetters.getItemId(product.value)));
 const countsProductReviews = computed(() => reviewGetters.getReviewCounts(productReviews.value));
 
 await fetchProduct(productParams).then(() => {
@@ -193,21 +207,28 @@ if (Object.keys(product.value).length === 0) {
     statusMessage: 'Product not found',
   });
 }
-setCurrentProduct(product.value || ({} as Product));
+
+setCurrentProduct(productForEditor.value || ({} as Product));
 setProductMeta();
-
-
-onBeforeRouteLeave(() => {
-  setCurrentProduct({} as Product);
-});
+setBlocksListContext('product');
+setBreadcrumbs();
 
 async function fetchReviews() {
   const productVariationId = productGetters.getVariationId(product.value);
   await fetchProductReviews(Number(productId), productVariationId);
+  if (isAuthorized.value) {
+    await fetchProductAuthenticatedReviews(Number(productId), productVariationId);
+  }
 }
 await fetchReviews();
 
-setBreadcrumbs();
+watch(
+  disableActions,
+  () => {
+    setCurrentProduct(productForEditor.value || ({} as Product));
+  },
+  { immediate: true },
+);
 
 /* TODO: This should only be temporary.
  *  It changes the url of the product page while on the page and switching the locale.
@@ -238,10 +259,20 @@ watch(
         (categoryTree) => categoryTreeGetters.getId(categoryTree) === productCategoryId,
       );
       if (categoryTree) {
-        setProductMetaData(product.value, categoryTree);
+        setProductMetaData(product.value);
         setProductRobotsMetaData(product.value);
       }
     }
+  },
+  { immediate: true },
+);
+
+watch(
+  () => product.value,
+  () => {
+    setProductCanonicalMetaData(product.value);
+    setProductMetaData(product.value);
+    setProductRobotsMetaData(product.value);
   },
   { immediate: true },
 );
@@ -275,7 +306,26 @@ const observeRecommendedSection = () => {
   }
 };
 
-onNuxtReady(() => observeRecommendedSection());
+onBeforeRouteLeave(() => {
+  resetNotification();
+  if (variationWatchHandler) {
+    variationWatchHandler();
+  }
+});
+
+onNuxtReady(() => {
+  observeRecommendedSection();
+
+  if (import.meta.client && useCallisto().isEnabled) {
+    variationWatchHandler = watch(variationId, async () => {
+      if (Number(productParams.variationId) !== variationId.value && variationId.value > 0) {
+        productParams.variationId = variationId.value;
+        await fetchProduct(productParams);
+        setCurrentProduct(productForEditor.value || ({} as Product));
+      }
+    });
+  }
+});
 
 // Get variationProperty group ID 9 once (für Zusatzinformationen)
 const additionalInfoGroup = computed(() => {

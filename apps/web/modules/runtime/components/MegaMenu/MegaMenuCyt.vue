@@ -1,7 +1,7 @@
 <template>
   <header ref="referenceRef" class="flex flex-col align-center relative w-full p-[20px] max-w-screen-3xl mx-auto" :class="[headerClass, { 'lg:pt-[0] lg:pb-[0]': $attrs.isSlimHeader } ]">
     <nav ref="floatingRef"
-      class="grid grid-cols-2 gap-x-[20px] lg:grid-cols-3"
+      class="grid grid-cols-2 gap-x-[20px] lg:grid-cols-3 2xl:grid-cols-[1fr_minmax(600px,800px)_1fr]"
       :class="{ 'lg:flex': $attrs.isSlimHeader }"
       >
 
@@ -141,7 +141,7 @@
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="27" height="20" viewBox="0 0 27 20"><g transform="translate(-0.5 -2.5)"><path d="M25,1H0A1,1,0,0,1-1,0,1,1,0,0,1,0-1H25a1,1,0,0,1,1,1A1,1,0,0,1,25,1Z" transform="translate(1.5 3.5)" fill="#fff"/><path d="M20,1H0A1,1,0,0,1-1,0,1,1,0,0,1,0-1H20a1,1,0,0,1,1,1A1,1,0,0,1,20,1Z" transform="translate(1.5 12.5)" fill="#fff"/><path d="M25,1H0A1,1,0,0,1-1,0,1,1,0,0,1,0-1H25a1,1,0,0,1,1,1A1,1,0,0,1,25,1Z" transform="translate(1.5 21.5)" fill="#fff"/></g></svg>
         </button>
-        <UiSearch class="pt-[20px] grow" />
+        <UiSearch class="grow" />
       </div>
     </nav>
 

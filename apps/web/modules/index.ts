@@ -18,6 +18,43 @@ export default defineNuxtModule({
     );
 
     /**
+     * Some inline JS
+     */
+    nuxt.options.app.head ||= {}
+    nuxt.options.app.head.script ||= []
+
+    nuxt.options.app.head.script.push({
+        type: 'text/javascript',
+        innerHTML: `
+            // Tag Version
+            console.log('Tag Version: 2.25.2');
+        `,
+    })
+
+    /**
+     * TrustedShops widget
+     */
+    nuxt.options.app.head.script.push({
+      src: 'https://widgets.trustedshops.com/js/X225BDEA0D9756BF24885264CC998C798.js',
+      async: true,
+      'data-desktop-y-offset': '0',
+      'data-mobile-y-offset': '0',
+      'data-desktop-disable-reviews': 'false',
+      'data-desktop-enable-custom': 'false',
+      'data-desktop-position': 'right',
+      'data-desktop-custom-width': '156',
+      'data-desktop-enable-fadeout': 'false',
+      'data-disable-mobile': 'false',
+      'data-disable-trustbadge': 'false',
+      'data-mobile-custom-width': '156',
+      'data-mobile-disable-reviews': 'false',
+      'data-mobile-enable-custom': 'false',
+      'data-mobile-position': 'left',
+      'data-mobile-enable-topbar': 'false',
+      'data-mobile-enable-fadeout': 'true',
+    })
+
+    /**
      * register components
      */
     const {resolve} = createResolver(import.meta.url);
@@ -107,6 +144,11 @@ export default defineNuxtModule({
         name: 'CrossSellingItemsAccessoryCyt',
         path: 'CrossSelling/CrossSellingItemsAccessoryCyt.vue',
         global: false,
+      },
+      {
+        name: 'UiFooter',
+        path: 'ui/Footer/FooterCyt.vue',
+        global: true,
       },
     ];
 
@@ -221,10 +263,10 @@ export default defineNuxtModule({
         CategorySorting.filePath = resolve('./runtime/components/CategorySortings/CategorySortingCyt.vue');
       }
       // Footer
-      const Footer = components.find((c) => c.pascalName === 'UiFooter');
-      if (Footer) {
-        Footer.filePath = resolve('./runtime/components/ui/Footer/FooterCyt.vue');
-      }
+      // const Footer = components.find((c) => c.pascalName === 'UiFooter');
+      // if (Footer) {
+      //   Footer.filePath = resolve('./runtime/components/ui/Footer/FooterCyt.vue');
+      // }
       // Pagination
       const Pagination = components.find((c) => c.pascalName === 'UiPagination');
       if (Pagination) {
