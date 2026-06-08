@@ -1,0 +1,148 @@
+{
+    "Header": {
+        "Claim1": "Ihr Hersteller für mobile Energie",
+        "Claim2a": "Kostenloser Briefversand",
+        "Claim2b": "innerhalb Deutschlands",
+        "Search": "Modellbezeichnung oder Modellnummer"
+    },
+    "Footer": {
+        "Hotline": "+49 30 80498134",
+        "Email": "{'service@polarcell.de'}",
+        "Service-Zeiten": {
+            "1": "[strong]Deutscher Telefonsupport[/strong] von Fachpersonal",
+            "2": "[strong]Sie erreichen uns:[/strong] Montag - Freitag:  9.00  - 17.00 Uhr"
+        },
+        "Straße": "Barnhelmstraße 17d",
+        "PLZ Ort": "14129 Berlin",
+        "Listen Überschriften": {
+            "1": "Informationen",
+            "2": "Über uns"
+        },
+        "Link Titel": {
+            "1": "Herstellergarantie",
+            "2": "Versandinformationen",
+            "3": "Batterieentsorgung",
+            "4": "Service",
+            "5": "Unternehmen"
+        },
+        "Sicherheit": "Sicher einkaufen",
+        "copyRight": {
+            "1": "Alle Preise sind {inclExcl} und zzgl. {Versandkosten}.",
+            "2": "Kostenloser Standardversand innerhalb Deutschlands.",
+            "3": "Polarcell. Alle Rechte vorbehalten."
+        }
+    },
+    "HomeEyeCatcher": {
+        "text1": "Die Premium Marke für",
+        "text2": "Die Premium +Akkumarke",
+        "text3": "Ihr Hersteller für mobile Energie",
+        "usps": {
+            "1": "[Beste Qualitätszellen]+für eine maximale+Lebensdauer",
+            "2": "[Deutsche Markenware]+streng kontrolliert nach+allen EU - Normen",
+            "3": "[24 Monate+Garantie]+auf alle Akkus",
+            "4": "[Stärkste erwerbare]+Akkus+ihrer Bauart",
+            "5": "[Zuverlässige+Schutzschaltungselektronik]+für Ihre Sicherheit",
+            "6": "[Längere Laufzeit]+dank höherer Kapazität"
+        }
+    },
+    "Finder": {
+        "Title": "Finden Sie schnell den passenden Akku",
+        "SelectLevel1": "Akku-Typ wählen",
+        "SelectLevel2": "Hersteller wählen",
+        "SelectLevel3": "Modell wählen",
+        "Button": "Ergebnisse anzeigen",
+        "ButtonCount1": "Ergebniss anzeigen"
+    },
+    "HomeCategories": {
+        "01": {
+            "name": "Handy-Akkus",
+            "url": "/handy-akkus",
+            "img": "https://cdn02.plentymarkets.com/91tuepbzlonh/frontend/pwa/handy-akkus.avif"
+        },
+        "02": {
+            "name": "Standard-Akkus",
+            "url": "/standard-akkus",
+            "img": "https://cdn02.plentymarkets.com/91tuepbzlonh/frontend/pwa/standar-akkus3.avif"
+        },
+        "03": {
+            "name": "Zubehör",
+            "url": "/handy-akkus/zubehoer",
+            "img": "https://cdn02.plentymarkets.com/91tuepbzlonh/frontend/pwa/acc3.avif"
+        }
+    },
+    "Topseller Startseite": "Unsere Topseller iPhone-Akkus",
+    "Topseller Kategorie ID Startseite": "90",
+    "TrustedShops": {
+        "Bewertung1": "Bewertungen (letzte 12 Mon.)",
+        "Bewertung2": "Bewertungen (gesamt)",
+        "Stand": "Stand:"
+    },
+    "Seo": {
+        "Titel": "PolarCell – Die Premium Akkumarke",
+        "Beschreibung": "[p][strong]Seit über 20 Jahren ist es unser Ziel unseren Kunden Akkus von höchster Qualität, Kapazität und Sicherheit zur Verfügung zu stellen.[/strong][/p][p]Als einer der wenigen deutschen Akkuhändler verfügen wir daher über ein eigenes Akkuprüflabor, in welchem unser qualifiziertes Fachpersonal täglich dafür sorgt, Ihnen als Endkunde nur die hochwertigsten und sichersten Produkte anbieten zu können. Zur Abgrenzung gegenüber marktüblicher „Billigware“ wurde daher im Jahre 2005 die Premium-Marke PolarCell ins Leben gerufen und steht seit dem für High-End Produkte im Akkumulatoren-Bereich.[/p]",
+        "Bild": "https://cdn02.plentymarkets.com/91tuepbzlonh/frontend/pwa/eyecatcher.avif"
+    },
+    "Faq": {
+        "Title": "Häufig gestellte Fragen",
+        "Faqs": {
+            "test": "test",
+            "01": {
+                "question": "Warum PolarCell und nicht ein Originalakku?",
+                "answer": "PolarCell legt dieselben Qualitätsstandards zugrunde wie die Originalakkus und erreicht durch Zelloptimierung und Selektion in der Regel sogar höhere Kapazitäten als die Originalakkus. Echte (!), neue (!) Originalakkus zu finden ist selbst für uns schwer, der Markt ist leider von aufgearbeiteter Gebrauchtware bzw. Plagiaten überschwemmt. Findet man doch einen echten Originalakku kostet dieser mind. das Doppelte von einem PolarCell Akku und wie lange dieser vorher ungenutzt gelagert wurde kann man schwer nachvollziehen. PolarCell Akkus werden regelmäßig nachproduziert, Sie erhalten also stets frische und dem Original qualitativ ebenwürdige Ware zu einem fairen Preis."
+            },
+            "02": {
+                "question": "Habe ich Garantie auf den Akku und was zählt als Garantiefall",
+                "answer": "Auf unsere PolarCell Akkus erhalten Sie volle 24 Monate Garantie. Diese deckt sowohl den Totalausfall als auch eine unnatürliche Degradation der Zellen ab. Der PolarCell Akku sollte hierbei nach zwei Jahren bzw. maximal 500 Ladezyklen noch mind. 80% seiner Ausgangsleistung erbringen."
+            },
+            "03": {
+                "question": "Schaffe ich den Umbau bei neueren Handymodellen mit fest verbauten Akkus auch selbst?",
+                "answer": "Wir empfehlen sich hierfür bei z.B. YouTube vorab ein paar Umbauvideos anzusehen. Anhand dieser Umbauanleitungen sollte man gut einschätzen können, ob man sich den Umbau selbst zutraut oder nicht. Unser universelles Werkzeugset ist sehr hilfreich, wenn man selbst kein Spezialwerkzeug hierfür besitzt. Im Zweifel bietet jeder gute Elektrofachmarkt einen entsprechenden Einbauservice an."
+            },
+            "04": {
+                "question": "Wie lange kann ich die Akkus ungenutzt einlagern – macht es Sinn gerade für ältere Geräte Akkus auf Vorrat zu kaufen?",
+                "answer": "Ungenutzt sollten die Akkus mind. alle 6 Monate auf ca. 80% nachgeladen werden, um eine Tiefentladung zu vermeiden. Da jedoch auch ungenutzte Akkus langsam degradieren raten wir von einem Kauf auf Vorrat ab. Fragen Sie im Zweifel bei uns an wie lange das benötigte Modell voraussichtlich noch im Sortiment sein wird und kaufen dann lieber frische Ware."
+            },
+            "05": {
+                "question": "",
+                "answer": ""
+            },
+            "06": {
+                "question": "",
+                "answer": ""
+            },
+            "07": {
+                "question": "",
+                "answer": ""
+            },
+            "08": {
+                "question": "",
+                "answer": ""
+            },
+            "09": {
+                "question": "",
+                "answer": ""
+            },
+            "10": {
+                "question": "",
+                "answer": ""
+            }
+        }
+    },
+    "Produktseite": {
+        "Versand": "Kostenloser Versand*",
+        "Kompatibilitäts-Checker": {
+            "title": "Kompatibilitäts-Checker",
+            "text1": "Passt dieser Akku?",
+            "text2": "Passt dieser Akku in mein Gerät?",
+            "button": "Kompatibilität prüfen"
+        },
+        "Fragen": {
+            "01": "Sie haben Fragen? Unser Kundencenter hilft!",
+            "02": "Kontaktformular",
+            "03": "Telefon"
+        },
+        "Kompatibilitäten": "Kompatibilitäten",
+        "Maße": "Maße",
+        "Zuletzt angesehen": "Zuletzt angesehen"
+    }
+}
