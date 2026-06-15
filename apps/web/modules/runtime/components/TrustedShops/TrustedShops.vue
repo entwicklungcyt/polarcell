@@ -1,5 +1,5 @@
 <template>
-  <div v-if="data && data.reviews" class="w-screen -mx-[50vw] relative left-1/2 bg-[#FFF5D3] mt-[40px] xl:mt-[80px] 2xl:mt-[100px]">
+  <div v-if="data && data.reviews && data.rating365" class="w-screen -mx-[50vw] relative left-1/2 bg-[#FFF5D3] mt-[40px] xl:mt-[80px] 2xl:mt-[100px]">
     <div class="max-w-screen-3xl mx-auto pt-[30px] pb-[40px] lg:py-[60px] xl:pb-[80px]">
       <div>
         <div class="grid grid-cols-[auto_100px] xl:grid-cols-[auto_140px] max-w-[480px] mx-auto px-[20px]">
