@@ -10,7 +10,7 @@
         </div>
         <ul v-if="viewport.isLessThan('lg') && !isItemView" class="flex flex-wrap items-center justify-center gap-[10px] pt-[30px]">
           <li v-for="(menuNode, index) in categoryTree">
-            <NuxtLink :to="localePath(generateCategoryLink(menuNode))" class="bg-primary-500 text-white text-[14px] font-bold flex items-center justify-center px-[10px] rounded-[15px] min-h-[30px]">
+            <NuxtLink :to="localePath(generateCategoryLink(menuNode))" class="bg-primary-500 text-white text-[14px] font-bold flex items-center justify-center px-[10px] rounded-[15px] min-h-[30px] no-underline">
               {{ categoryTreeGetters.getName(menuNode).replace(' - ', '-') }}
             </NuxtLink>
           </li>
