@@ -94,6 +94,16 @@
       @registered="closeAuthentication"
     />
   </UiModal>
+
+  <!-- for TrustedShops by cyt -->
+  <div id="trustedShopsCheckout" style="display: none;">
+    <span id="tsCheckoutOrderNr">{{ orderGetters.getId(order) }}</span>
+    <span id="tsCheckoutBuyerEmail">{{ orderGetters.getOrderEmail(order) }}</span>
+    <span id="tsCheckoutOrderAmount">{{ orderGetters.getTotal(orderGetters.getTotals(order)) }}</span>
+    <span id="tsCheckoutOrderCurrency">{{ orderGetters.getCurrency(order) }}</span>
+    <span id="tsCheckoutOrderPaymentType">{{ order.paymentMethodKey }}</span>
+    <span id="tsCheckoutOrderEstDeliveryDate"></span>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -112,4 +122,19 @@ const bankDetails = computed(() => orderGetters.getOrderPaymentBankDetails(order
 useProcessingOrder().processingOrder.value = false;
 
 await getActiveShippingCountries();
+
+// for TrustedShops widget by cyt - re-initialize after 3 seconds
+onMounted(() => {
+  setTimeout(() => {
+    if (window.trustbadge) {
+      window.trustbadge.reInitialize()
+    }
+  }, 3000)
+})
+
+declare global {
+  interface Window {
+    trustbadge?: { reInitialize: () => void }
+  }
+}
 </script>
