@@ -1,10 +1,17 @@
 {
-  "rating365": 4.75,
-  "count365": 4,
-  "overallCount": 698,
-  "calculatedAt": "2026-07-29T04:08:04.317Z",
-  "lastUpdated": "2026-07-29T05:16:14.460Z",
+  "rating365": 4.8,
+  "count365": 5,
+  "overallCount": 699,
+  "calculatedAt": "2026-07-30T04:06:56.473Z",
+  "lastUpdated": "2026-07-30T04:53:09.126Z",
   "reviews": [
+    {
+      "name": "Community-Mitglied",
+      "title": "Schneller als erwaret",
+      "comment": "Schneller als erwaret",
+      "rating": 5,
+      "submittedAt": "2026-07-29T12:17:14.669Z"
+    },
     {
       "name": "Community-Mitglied",
       "title": "Danke für eine Super Schnelle Sendung un…",
@@ -137,13 +144,6 @@
       "comment": "Tolles Produkt in wertiger Verpackung dazu noch toller Service und guter Preis!",
       "rating": 5,
       "submittedAt": "2024-10-30T00:16:41.082Z"
-    },
-    {
-      "name": "Community-Mitglied",
-      "title": "Ware in Ordnung habe Retoure…",
-      "comment": "Ware in Ordnung habe Retoure angemmeldet hat alles super geklappt danke!!!",
-      "rating": 5,
-      "submittedAt": "2024-10-15T13:48:50.887Z"
     }
   ]
 }
