@@ -1,10 +1,17 @@
 {
-  "rating365": 4.8,
-  "count365": 5,
-  "overallCount": 699,
-  "calculatedAt": "2026-08-02T04:13:21.391Z",
-  "lastUpdated": "2026-08-02T05:21:07.076Z",
+  "rating365": 4.83,
+  "count365": 6,
+  "overallCount": 700,
+  "calculatedAt": "2026-08-03T04:17:34.699Z",
+  "lastUpdated": "2026-08-03T05:35:42.844Z",
   "reviews": [
+    {
+      "name": "Community-Mitglied",
+      "title": "alles top",
+      "comment": "alles top",
+      "rating": 5,
+      "submittedAt": "2026-08-02T18:33:55.836Z"
+    },
     {
       "name": "Community-Mitglied",
       "title": "Schneller als erwaret",
@@ -137,13 +144,6 @@
       "comment": "Schneller Versand, alles sehr gut verpackt.\nÜber der Qualität des Akkus kann ich noch keine Aussage treffen.",
       "rating": 5,
       "submittedAt": "2024-12-02T13:37:43.907Z"
-    },
-    {
-      "name": "Community-Mitglied",
-      "title": "Tolles Produkt in wertiger Verpackung…",
-      "comment": "Tolles Produkt in wertiger Verpackung dazu noch toller Service und guter Preis!",
-      "rating": 5,
-      "submittedAt": "2024-10-30T00:16:41.082Z"
     }
   ]
 }
