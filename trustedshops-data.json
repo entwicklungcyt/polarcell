@@ -1,10 +1,17 @@
 {
-  "rating365": 4.83,
-  "count365": 6,
-  "overallCount": 700,
-  "calculatedAt": "2026-08-18T04:14:57.004Z",
-  "lastUpdated": "2026-08-19T02:51:14.916Z",
+  "rating365": 4.86,
+  "count365": 7,
+  "overallCount": 701,
+  "calculatedAt": "2026-08-19T11:55:49.560Z",
+  "lastUpdated": "2026-08-20T02:50:40.813Z",
   "reviews": [
+    {
+      "name": "Community-Mitglied",
+      "title": "noch besser geht es nicht",
+      "comment": "noch besser geht es nicht",
+      "rating": 5,
+      "submittedAt": "2026-08-19T11:55:19.172Z"
+    },
     {
       "name": "Community-Mitglied",
       "title": "alles top",
@@ -137,13 +144,6 @@
       "comment": "Schnelle Lieferung und gutes produkt. ",
       "rating": 5,
       "submittedAt": "2024-12-18T14:15:36.989Z"
-    },
-    {
-      "name": "Community-Mitglied",
-      "title": "Schneller Versand",
-      "comment": "Schneller Versand, alles sehr gut verpackt.\nÜber der Qualität des Akkus kann ich noch keine Aussage treffen.",
-      "rating": 5,
-      "submittedAt": "2024-12-02T13:37:43.907Z"
     }
   ]
 }
