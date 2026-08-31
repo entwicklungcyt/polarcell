@@ -1,10 +1,17 @@
 {
-  "rating365": 4.88,
-  "count365": 8,
-  "overallCount": 702,
-  "calculatedAt": "2026-08-30T04:12:29.067Z",
-  "lastUpdated": "2026-08-30T07:44:12.778Z",
+  "rating365": 4.89,
+  "count365": 9,
+  "overallCount": 703,
+  "calculatedAt": "2026-08-31T07:51:59.053Z",
+  "lastUpdated": "2026-08-31T07:58:28.025Z",
   "reviews": [
+    {
+      "name": "Community-Mitglied",
+      "title": "Schnelle Lieferung",
+      "comment": "Schnelle Lieferung.Alles gut.",
+      "rating": 5,
+      "submittedAt": "2026-08-31T07:51:28.643Z"
+    },
     {
       "name": "Community-Mitglied",
       "title": "Alles perfekt 👍",
@@ -137,13 +144,6 @@
       "comment": "Akku war defekt! Funktionierte nicht im Produkt,wo es benötigt wurde! ",
       "rating": 3,
       "submittedAt": "2025-01-03T11:21:19.729Z"
-    },
-    {
-      "name": "Community-Mitglied",
-      "title": "zum ersten Mal etwas bestellt als Gast…",
-      "comment": "zum ersten Mal etwas bestellt als Gast und sehr schnell die Ware erhalten.",
-      "rating": 5,
-      "submittedAt": "2024-12-30T08:00:30.198Z"
     }
   ]
 }
