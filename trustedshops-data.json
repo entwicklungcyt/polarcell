@@ -1,10 +1,17 @@
 {
-  "rating365": 4.9,
-  "count365": 10,
-  "overallCount": 704,
-  "calculatedAt": "2026-09-13T04:11:48.170Z",
-  "lastUpdated": "2026-09-13T07:03:35.945Z",
+  "rating365": 4.91,
+  "count365": 11,
+  "overallCount": 705,
+  "calculatedAt": "2026-09-14T04:03:26.597Z",
+  "lastUpdated": "2026-09-14T07:26:33.382Z",
   "reviews": [
+    {
+      "name": "Community-Mitglied",
+      "title": "Sehr gute ausführliche ausfühliche Beratung TOP!!!",
+      "comment": "Sehr gute ausfühliche Beratung. TOP!!!",
+      "rating": 5,
+      "submittedAt": "2026-09-13T14:33:51.464Z"
+    },
     {
       "name": "Community-Mitglied",
       "title": "Schnelle Lieferung",
@@ -137,13 +144,6 @@
       "comment": "Es ist ein gutes Gefühl zu wissen dass man bei einem Kauf abgesichert ist!",
       "rating": 5,
       "submittedAt": "2025-01-14T10:34:51.789Z"
-    },
-    {
-      "name": "Community-Mitglied",
-      "title": "Akku war defekt",
-      "comment": "Akku war defekt! Funktionierte nicht im Produkt,wo es benötigt wurde! ",
-      "rating": 3,
-      "submittedAt": "2025-01-03T11:21:19.729Z"
     }
   ]
 }
