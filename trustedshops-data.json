@@ -1,10 +1,17 @@
 {
-  "rating365": 4.91,
-  "count365": 11,
-  "overallCount": 705,
-  "calculatedAt": "2026-09-21T04:10:39.235Z",
-  "lastUpdated": "2026-09-21T07:30:26.040Z",
+  "rating365": 4.92,
+  "count365": 12,
+  "overallCount": 706,
+  "calculatedAt": "2026-09-22T04:07:46.568Z",
+  "lastUpdated": "2026-09-22T07:09:55.374Z",
   "reviews": [
+    {
+      "name": "Community-Mitglied",
+      "title": " schnelle Lieferung alles top",
+      "comment": "Super schnelle Lieferung. Top Batterie für IPhone 13 Pro Max. Hält jetzt mindestens 10h Bildschirmzeit vorher nur 4h. Also jetzt muss ich nur noch alle 2 Tage das Handy laden. \nNur zu empfehlen ",
+      "rating": 5,
+      "submittedAt": "2026-09-21T09:50:09.746Z"
+    },
     {
       "name": "Community-Mitglied",
       "title": "Sehr gute ausführliche ausfühliche Beratung TOP!!!",
@@ -137,13 +144,6 @@
       "comment": "Sehr schnelle Lieferung, akzeptabler Preis, kleiner Aufpreis für Einschreibesendung (war es wert) und gute Qualität - aber wichtig für Nutzer ist die Info zur Ladung, denn nach dem ersten Zyklus war die volle Kapazität noch nicht vorhanden - jetzt schon und das ist sehr gut.",
       "rating": 5,
       "submittedAt": "2025-02-05T14:05:51.676Z"
-    },
-    {
-      "name": "Community-Mitglied",
-      "title": "Es ist ein gutes Gefühl zu wissen dass…",
-      "comment": "Es ist ein gutes Gefühl zu wissen dass man bei einem Kauf abgesichert ist!",
-      "rating": 5,
-      "submittedAt": "2025-01-14T10:34:51.789Z"
     }
   ]
 }
