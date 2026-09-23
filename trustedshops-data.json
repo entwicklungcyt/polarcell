@@ -1,10 +1,17 @@
 {
   "rating365": 4.92,
-  "count365": 12,
-  "overallCount": 706,
-  "calculatedAt": "2026-09-22T04:07:46.568Z",
-  "lastUpdated": "2026-09-22T07:09:55.374Z",
+  "count365": 13,
+  "overallCount": 707,
+  "calculatedAt": "2026-09-23T04:04:43.111Z",
+  "lastUpdated": "2026-09-23T07:08:19.743Z",
   "reviews": [
+    {
+      "name": "Community-Mitglied",
+      "title": "Bestellung",
+      "comment": "Bestellung, Versand, Verpackung und der Akku selber alles Tipptopp. Der Einbau war mit den mitgelieferten Klebestreifen auch easy, obgleich das Flexkabel des Steckers noch passend gebogen werden musste… etwas diffizil, aber hat geklappt. Jetzt muss sich noch die Performance im Langzeittest zeigen🧐",
+      "rating": 5,
+      "submittedAt": "2026-09-22T09:55:37.214Z"
+    },
     {
       "name": "Community-Mitglied",
       "title": " schnelle Lieferung alles top",
@@ -137,13 +144,6 @@
       "comment": "einmal immer die Versandte Ware auf einen Anschluss des Stecker achten damit die Steck Verbindungen nicht beschädigt werden, das sollte man doch einfach halber mal immer in Augenschein nehmen  vor den versenden. \n\ndenn ich habe Zwei  Akkus bestellt und bei den einen ist die Steck Verbindung beschädigt eine kleine eingedrückte stelle in der Verbindung und so mit geht leider das Akku nicht. schade aber sonst war ich immer sehr zufrieden . Und immer schnelle Lieferung  super!",
       "rating": 5,
       "submittedAt": "2025-02-06T14:31:08.980Z"
-    },
-    {
-      "name": "Community-Mitglied",
-      "title": "Volle Kapazität",
-      "comment": "Sehr schnelle Lieferung, akzeptabler Preis, kleiner Aufpreis für Einschreibesendung (war es wert) und gute Qualität - aber wichtig für Nutzer ist die Info zur Ladung, denn nach dem ersten Zyklus war die volle Kapazität noch nicht vorhanden - jetzt schon und das ist sehr gut.",
-      "rating": 5,
-      "submittedAt": "2025-02-05T14:05:51.676Z"
     }
   ]
 }
