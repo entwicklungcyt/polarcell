@@ -143,7 +143,7 @@ import type { WatchStopHandle } from 'vue';
 import { productGetters, reviewGetters, categoryTreeGetters } from '@plentymarkets/shop-api';
 import type { Locale } from '#i18n';
 
-import { useLastSeen } from '../../composables/useLastSeen';
+import { useLastSeenCyt } from '../../composables/useLastSeenCyt';
 
 defineI18nRoute({
   locales: process.env.LANGUAGELIST?.split(',') as Locale[],
@@ -428,7 +428,7 @@ const manufacturerHtml = computed(() => {
 });
 
 // last seen
-const { add } = useLastSeen();
+const { add } = useLastSeenCyt();
 
 // After product data is loaded
 onMounted(() => {

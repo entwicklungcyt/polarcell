@@ -40,7 +40,7 @@
 
 <script setup lang="ts">
 import { productGetters } from '@plentymarkets/shop-api';
-import { useLastSeen } from '../../composables/useLastSeen';
+import { useLastSeenCyt } from '../../composables/useLastSeenCyt';
 
 const props = defineProps<{
   excludeVariationId?: number;
@@ -48,7 +48,7 @@ const props = defineProps<{
 
 const { t, n } = useI18n();
 const localePath = useLocalePath();
-const { getItems, remove } = useLastSeen();
+const { getItems, remove } = useLastSeenCyt();
 
 const loaded = ref(false);
 
