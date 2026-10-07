@@ -1,10 +1,17 @@
 {
-  "rating365": 4.88,
-  "count365": 17,
-  "overallCount": 711,
-  "calculatedAt": "2026-10-06T04:01:28.330Z",
-  "lastUpdated": "2026-10-06T08:25:33.590Z",
+  "rating365": 4.89,
+  "count365": 18,
+  "overallCount": 712,
+  "calculatedAt": "2026-10-07T04:03:00.963Z",
+  "lastUpdated": "2026-10-07T08:01:22.656Z",
   "reviews": [
+    {
+      "name": "Community-Mitglied",
+      "title": "Gute Wahre",
+      "comment": "Gute Wahre!",
+      "rating": 5,
+      "submittedAt": "2026-10-06T17:11:29.517Z"
+    },
     {
       "name": "Community-Mitglied",
       "title": "Bestellung",
@@ -137,13 +144,6 @@
       "comment": "Envoi rapide, conditionnement parfait, réponse du S.A.V rapide et précise.",
       "rating": 5,
       "submittedAt": "2025-02-08T10:00:48.557Z"
-    },
-    {
-      "name": "Community-Mitglied",
-      "title": "einmal immer die Versandte Ware auf…",
-      "comment": "einmal immer die Versandte Ware auf einen Anschluss des Stecker achten damit die Steck Verbindungen nicht beschädigt werden, das sollte man doch einfach halber mal immer in Augenschein nehmen  vor den versenden. \n\ndenn ich habe Zwei  Akkus bestellt und bei den einen ist die Steck Verbindung beschädigt eine kleine eingedrückte stelle in der Verbindung und so mit geht leider das Akku nicht. schade aber sonst war ich immer sehr zufrieden . Und immer schnelle Lieferung  super!",
-      "rating": 5,
-      "submittedAt": "2025-02-06T14:31:08.980Z"
     }
   ]
 }
