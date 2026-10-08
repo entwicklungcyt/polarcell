@@ -1,10 +1,17 @@
 {
   "rating365": 4.89,
-  "count365": 18,
-  "overallCount": 712,
-  "calculatedAt": "2026-10-07T04:03:00.963Z",
-  "lastUpdated": "2026-10-07T08:01:22.656Z",
+  "count365": 19,
+  "overallCount": 713,
+  "calculatedAt": "2026-10-08T04:11:41.479Z",
+  "lastUpdated": "2026-10-08T08:16:05.243Z",
   "reviews": [
+    {
+      "name": "Community-Mitglied",
+      "title": "Schnelle und komplikationslose Kaufabwic…",
+      "comment": "Schnelle und komplikationslose Kaufabwicklung.",
+      "rating": 5,
+      "submittedAt": "2026-10-07T19:01:16.896Z"
+    },
     {
       "name": "Community-Mitglied",
       "title": "Gute Wahre",
@@ -137,13 +144,6 @@
       "comment": "Schnelle Lieferung,guter Preis und getestet ,kann mich nicht beklagen alles wunderbar gelaufen",
       "rating": 5,
       "submittedAt": "2025-02-20T23:51:59.213Z"
-    },
-    {
-      "name": "Community-Mitglied",
-      "title": "Rien à redire pour cette commande (4 batteries pour téléphone).",
-      "comment": "Envoi rapide, conditionnement parfait, réponse du S.A.V rapide et précise.",
-      "rating": 5,
-      "submittedAt": "2025-02-08T10:00:48.557Z"
     }
   ]
 }
