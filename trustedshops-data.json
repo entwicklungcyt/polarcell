@@ -1,10 +1,17 @@
 {
   "rating365": 4.9,
-  "count365": 20,
-  "overallCount": 714,
-  "calculatedAt": "2026-10-21T04:12:42.112Z",
-  "lastUpdated": "2026-10-21T06:52:29.789Z",
+  "count365": 21,
+  "overallCount": 715,
+  "calculatedAt": "2026-10-22T04:06:44.161Z",
+  "lastUpdated": "2026-10-22T06:56:46.527Z",
   "reviews": [
+    {
+      "name": "Community-Mitglied",
+      "title": "Habe schon öfters bei Polarcell bestellt…",
+      "comment": "Habe schon öfters bei Polarcell bestellt bin sehr zufrieden 👍👍. Akku ist stärker als das Original und hält dementsprechend sehr lange. ",
+      "rating": 5,
+      "submittedAt": "2026-10-21T09:47:58.901Z"
+    },
     {
       "name": "Community-Mitglied",
       "title": "Schnelle und komplikationslose Kaufabwic…",
@@ -137,13 +144,6 @@
       "comment": "Kunden Betreuen , sehr freundlichem Personal am Telefon ,und Hilfreich .",
       "rating": 5,
       "submittedAt": "2025-02-25T16:09:33.092Z"
-    },
-    {
-      "name": "Community-Mitglied",
-      "title": "Schnelle Lieferung,guter Preis und…",
-      "comment": "Schnelle Lieferung,guter Preis und getestet ,kann mich nicht beklagen alles wunderbar gelaufen",
-      "rating": 5,
-      "submittedAt": "2025-02-20T23:51:59.213Z"
     }
   ]
 }
