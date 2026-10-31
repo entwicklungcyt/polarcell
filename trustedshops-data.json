@@ -1,10 +1,17 @@
 {
   "rating365": 4.91,
-  "count365": 22,
-  "overallCount": 716,
-  "calculatedAt": "2026-10-30T04:17:26.513Z",
-  "lastUpdated": "2026-10-30T07:57:12.677Z",
+  "count365": 23,
+  "overallCount": 717,
+  "calculatedAt": "2026-10-31T04:04:52.854Z",
+  "lastUpdated": "2026-10-31T07:51:49.386Z",
   "reviews": [
+    {
+      "name": "Community-Mitglied",
+      "title": "Sehr schneller Versand",
+      "comment": "Sehr schneller Versand, gerade 24 Stunden, gut verpackt, mit Infoblatt bezüglich erster Aufladungen. Dem Akku lag sein spezifisches Klebepad bei. Nach 6 Tagen Betrieb kann ich sagen, dass er gut funktioniert. Ich persönlich werde allerdings vor der nächsten Bestellung erst nachforschen, ob derselbe Shop über eBay nicht noch günstigere und umfangreichere Sets anbietet, das habe ich diesmal übersehen.",
+      "rating": 5,
+      "submittedAt": "2026-10-30T17:43:56.447Z"
+    },
     {
       "name": "Community-Mitglied",
       "title": "Habe schon öfters bei Polarcell bestellt…",
@@ -137,13 +144,6 @@
       "comment": "Versendet schnell. Support ist zuverlässig.",
       "rating": 5,
       "submittedAt": "2025-03-09T12:50:06.815Z"
-    },
-    {
-      "name": "Community-Mitglied",
-      "title": "Kunden Betreuen ",
-      "comment": "Kunden Betreuen , sehr freundlichem Personal am Telefon ,und Hilfreich .",
-      "rating": 5,
-      "submittedAt": "2025-02-25T16:09:33.092Z"
     }
   ]
 }
