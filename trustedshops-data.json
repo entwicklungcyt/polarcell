@@ -1,10 +1,24 @@
 {
-  "rating365": 4.92,
-  "count365": 24,
-  "overallCount": 718,
-  "calculatedAt": "2026-11-03T04:07:07.037Z",
-  "lastUpdated": "2026-11-03T08:54:26.013Z",
+  "rating365": 4.93,
+  "count365": 28,
+  "overallCount": 722,
+  "calculatedAt": "2026-11-04T04:13:46.330Z",
+  "lastUpdated": "2026-11-04T08:26:11.025Z",
   "reviews": [
+    {
+      "name": "Community-Mitglied",
+      "title": "bestellung perfekt",
+      "comment": "bestellung, preis -leistung und transport incl. verpackung super. alles ohne einschränkung zu empfehlen.",
+      "rating": 5,
+      "submittedAt": "2026-11-03T11:44:14.825Z"
+    },
+    {
+      "name": "Community-Mitglied",
+      "title": "Alles gut",
+      "comment": "Alles gut ",
+      "rating": 5,
+      "submittedAt": "2026-11-03T10:04:30.972Z"
+    },
     {
       "name": "Community-Mitglied",
       "title": "Sehr schnelle Lieferung",
@@ -130,20 +144,6 @@
       "comment": "Die Kommunikation und Lieferzeit waren in Ordnung. Leider ist der akku schlechter als mein alter. Nach gut einem Tag von 85% auf 25% und das bei 80% Standby Nutzung, bei bei einer Sollleistung von 3600 mAh.\nEntweder Uraltakku oder defekt. Handy wurde überprüft nach versteckten Stromfressern.Handy ist in Ordnung. \nSchade",
       "rating": 2,
       "submittedAt": "2025-04-12T06:40:11.300Z"
-    },
-    {
-      "name": "Community-Mitglied",
-      "title": "Sehr gut",
-      "comment": "Sehr gut, wie immer",
-      "rating": 5,
-      "submittedAt": "2025-03-23T18:28:30.751Z"
-    },
-    {
-      "name": "Community-Mitglied",
-      "title": "Alles gut erledigt.",
-      "comment": "Alles gut erledigt.",
-      "rating": 5,
-      "submittedAt": "2025-03-20T11:50:48.879Z"
     }
   ]
 }
