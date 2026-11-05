@@ -1,10 +1,17 @@
 {
   "rating365": 4.93,
-  "count365": 28,
-  "overallCount": 722,
-  "calculatedAt": "2026-11-04T04:13:46.330Z",
-  "lastUpdated": "2026-11-04T08:26:11.025Z",
+  "count365": 29,
+  "overallCount": 723,
+  "calculatedAt": "2026-11-05T04:03:59.469Z",
+  "lastUpdated": "2026-11-05T08:50:56.940Z",
   "reviews": [
+    {
+      "name": "Community-Mitglied",
+      "title": "schneller versand und sicher verpackt - ersatz-akku fuer blackberry 9700",
+      "comment": "schneller versand und sicher verpackt\nder ersatz-akku war fuer ein blackberry bold 9700 (ende 2009) - funktioniert\n\nzum vergleich (nur 2G-netz aktiviert):\nder original-akku hat ca 14 tage im standby durchgehalten (ende 2026, nach 17 jahren dauerbetrieb hielt der akku noch max 2 tage im standby / restkapazitaet < 20%)\nder ersatz-akku von polarcell mit einer etwas groesseren kapazitaet von 1700mAh hatte nach 10 tagen im standby noch 1.5-2 von 5 ladebalken - das passt zu den angaben\n",
+      "rating": 5,
+      "submittedAt": "2026-11-04T13:47:51.300Z"
+    },
     {
       "name": "Community-Mitglied",
       "title": "bestellung perfekt",
@@ -137,13 +144,6 @@
       "comment": "Unkomplizierte Abwicklung, schneller Versand",
       "rating": 5,
       "submittedAt": "2025-05-04T19:05:48.740Z"
-    },
-    {
-      "name": "Community-Mitglied",
-      "title": "Die Kommunikation und Lieferzeit waren…",
-      "comment": "Die Kommunikation und Lieferzeit waren in Ordnung. Leider ist der akku schlechter als mein alter. Nach gut einem Tag von 85% auf 25% und das bei 80% Standby Nutzung, bei bei einer Sollleistung von 3600 mAh.\nEntweder Uraltakku oder defekt. Handy wurde überprüft nach versteckten Stromfressern.Handy ist in Ordnung. \nSchade",
-      "rating": 2,
-      "submittedAt": "2025-04-12T06:40:11.300Z"
     }
   ]
 }
