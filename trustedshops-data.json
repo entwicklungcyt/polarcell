@@ -1,10 +1,17 @@
 {
-  "rating365": 4.93,
-  "count365": 30,
-  "overallCount": 724,
-  "calculatedAt": "2026-11-10T04:10:51.585Z",
-  "lastUpdated": "2026-11-10T09:03:07.093Z",
+  "rating365": 4.94,
+  "count365": 31,
+  "overallCount": 725,
+  "calculatedAt": "2026-11-11T04:04:50.398Z",
+  "lastUpdated": "2026-11-11T08:43:15.826Z",
   "reviews": [
+    {
+      "name": "Community-Mitglied",
+      "title": "Alles bestens sehr zufrieden 👍",
+      "comment": "Alles bestens sehr zufrieden 👍 ",
+      "rating": 5,
+      "submittedAt": "2026-11-11T04:02:53.285Z"
+    },
     {
       "name": "Community-Mitglied",
       "title": "schneller versand und sicher verpackt - ersatz-akku fuer blackberry 9700",
@@ -137,13 +144,6 @@
       "comment": "Hatte den gleichen Akku für selbiges Mobltelefon schon in 2021 gekauft. Nach nur 4 Jahren hat sich der Akku aufgebläht und wurde somit zum Sicherheitsrisiko. Da ist bei der Qualität des Produkts noch viel Luft nach oben.",
       "rating": 3,
       "submittedAt": "2025-05-19T16:47:24.729Z"
-    },
-    {
-      "name": "Community-Mitglied",
-      "title": "Unkomplizierte Abwicklung",
-      "comment": "Unkomplizierte Abwicklung, schneller Versand",
-      "rating": 5,
-      "submittedAt": "2025-05-04T19:05:48.740Z"
     }
   ]
 }
