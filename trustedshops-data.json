@@ -1,10 +1,17 @@
 {
   "rating365": 4.94,
-  "count365": 33,
-  "overallCount": 727,
-  "calculatedAt": "2026-11-27T04:14:37.958Z",
-  "lastUpdated": "2026-11-27T10:24:11.804Z",
+  "count365": 34,
+  "overallCount": 728,
+  "calculatedAt": "2026-11-28T04:04:25.676Z",
+  "lastUpdated": "2026-11-28T09:40:52.772Z",
   "reviews": [
+    {
+      "name": "Community-Mitglied",
+      "title": "Passt und schnell",
+      "comment": "passt wie angegeben für das Modell trotz dickerem Akku weil doppelte Kapazität als das Original.",
+      "rating": 5,
+      "submittedAt": "2026-11-27T20:14:30.104Z"
+    },
     {
       "name": "Community-Mitglied",
       "title": "Alles bestens sehr zufrieden 👍",
@@ -137,13 +144,6 @@
       "comment": "Die Batterie war die Richtige und der Versand ging sehr schnell. Vielen Dank.",
       "rating": 5,
       "submittedAt": "2025-06-06T12:58:22.686Z"
-    },
-    {
-      "name": "Community-Mitglied",
-      "title": "Akku hat nur 4 Jahre gehalten",
-      "comment": "Hatte den gleichen Akku für selbiges Mobltelefon schon in 2021 gekauft. Nach nur 4 Jahren hat sich der Akku aufgebläht und wurde somit zum Sicherheitsrisiko. Da ist bei der Qualität des Produkts noch viel Luft nach oben.",
-      "rating": 3,
-      "submittedAt": "2025-05-19T16:47:24.729Z"
     }
   ]
 }
